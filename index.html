@@ -3,73 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afjal Alam | Data Analyst Portfolio</title>
+    <title>Afjal Alam | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* Base Colors & Typography */
         :root {
-            --bg-color: #121212;
-            --secondary-bg: #1e1e1e;
-            --accent-color: #f39c12;
-            --text-color: #ffffff;
-            --text-muted: #a0a0a0;
+            --bg-color: #0f172a; /* Deep modern dark background */
+            --secondary-bg: #1e293b; /* Slightly lighter dark for cards */
+            --accent-color: #38bdf8; /* Modern tech blue accent */
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
         body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
         a { text-decoration: none; color: inherit; }
         
         /* Navbar */
-        nav { position: fixed; width: 100%; background: rgba(18, 18, 18, 0.9); padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 1px solid #333; }
-        .logo { font-size: 1.5em; font-weight: 700; color: var(--accent-color); }
-        .nav-links a { margin-left: 30px; font-weight: 600; transition: color 0.3s; }
+        nav { position: fixed; width: 100%; background: rgba(15, 23, 42, 0.95); padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 1px solid #334155; backdrop-filter: blur(10px); }
+        .logo { font-size: 1.5em; font-weight: 700; color: var(--accent-color); letter-spacing: 1px; }
+        .nav-links a { margin-left: 30px; font-weight: 500; font-size: 0.95em; transition: color 0.3s; }
         .nav-links a:hover { color: var(--accent-color); }
 
-        /* Hero Section */
-        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; }
-        .hero h1 { font-size: 4em; margin-bottom: 10px; }
-        .hero h2 { font-size: 2em; color: var(--accent-color); font-weight: 400; margin-bottom: 20px; }
-        .hero p { color: var(--text-muted); font-size: 1.2em; margin-bottom: 30px; }
-        .btn { padding: 12px 30px; background: var(--accent-color); color: #fff; border-radius: 30px; font-weight: 600; transition: 0.3s; }
-        .btn:hover { background: #d68910; transform: translateY(-3px); }
+        /* Home / Hero Section (Circular Photo Interface) */
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 100px 20px 50px; }
+        .profile-img-container { width: 200px; height: 200px; border-radius: 50%; overflow: hidden; border: 4px solid var(--accent-color); margin-bottom: 25px; box-shadow: 0 0 25px rgba(56, 189, 248, 0.4); }
+        .profile-img-container img { width: 100%; height: 100%; object-fit: cover; }
+        .hero h1 { font-size: 3.5em; margin-bottom: 5px; font-weight: 700; }
+        .hero h2 { font-size: 1.5em; color: var(--accent-color); font-weight: 400; margin-bottom: 20px; }
+        .hero p { color: var(--text-muted); font-size: 1.1em; margin-bottom: 35px; max-width: 600px; }
+        .btn { padding: 14px 35px; background: var(--accent-color); color: #0f172a; border-radius: 30px; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; display: inline-block; font-size: 1.1em; }
+        .btn:hover { background: #0ea5e9; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3); }
 
-        /* Sections Structure */
+        /* Sections General Structure */
         section { padding: 80px 10%; }
-        .section-title { font-size: 2.5em; text-align: center; margin-bottom: 50px; color: var(--text-color); }
-        .section-title span { color: var(--accent-color); border-bottom: 3px solid var(--accent-color); }
+        .section-title { font-size: 2.5em; text-align: center; margin-bottom: 50px; color: var(--text-color); font-weight: 700; }
+        .section-title span { color: var(--accent-color); }
 
-        /* About & Skills */
-        .about-content { display: flex; gap: 50px; flex-wrap: wrap; }
-        .about-text { flex: 1; min-width: 300px; }
-        .about-text p { color: var(--text-muted); margin-bottom: 20px; }
-        .skills-container { flex: 1; min-width: 300px; }
-        .skill { margin-bottom: 15px; }
-        .skill-name { font-weight: 600; margin-bottom: 5px; }
-        .skill-bar { background: #333; height: 10px; border-radius: 5px; overflow: hidden; }
-        .skill-fill { background: var(--accent-color); height: 100%; border-radius: 5px; }
-
-        /* Resume Section (Timeline) */
-        .timeline { position: relative; border-left: 2px solid var(--accent-color); padding-left: 30px; margin-left: 20px; }
-        .timeline-item { margin-bottom: 40px; position: relative; }
-        .timeline-item::before { content: ''; position: absolute; left: -38px; top: 0; width: 15px; height: 15px; background: var(--accent-color); border-radius: 50%; }
-        .timeline-date { color: var(--accent-color); font-weight: 600; margin-bottom: 5px; }
-        .timeline-title { font-size: 1.5em; font-weight: 700; margin-bottom: 10px; }
-        .timeline-company { font-size: 1.1em; color: var(--text-muted); margin-bottom: 15px; }
-        .timeline-item ul { list-style-type: disc; padding-left: 20px; color: var(--text-muted); }
+        /* Skills Section */
+        .skills-container { max-width: 800px; margin: 0 auto; background: var(--secondary-bg); padding: 40px; border-radius: 15px; border: 1px solid #334155; text-align: center; }
+        .skills-content { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 20px; }
+        .skill-tag { background: #0f172a; color: var(--accent-color); padding: 12px 24px; border-radius: 30px; font-weight: 600; border: 1px solid #38bdf8; transition: all 0.3s; }
+        .skill-tag:hover { background: var(--accent-color); color: #0f172a; transform: translateY(-3px); }
 
         /* Projects Section */
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .project-card { background: var(--secondary-bg); border-radius: 10px; padding: 25px; transition: 0.3s; border: 1px solid #333; }
-        .project-card:hover { transform: translateY(-10px); border-color: var(--accent-color); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
-        .project-card h3 { color: var(--accent-color); margin-bottom: 15px; }
-        .project-card p { color: var(--text-muted); font-size: 0.95em; margin-bottom: 20px; }
-        .project-link { color: #fff; font-weight: 600; border-bottom: 1px solid var(--accent-color); padding-bottom: 2px; }
-        .project-link:hover { color: var(--accent-color); }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .project-card { background: var(--secondary-bg); border-radius: 15px; padding: 30px; transition: all 0.3s ease; border: 1px solid #334155; position: relative; overflow: hidden; }
+        .project-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--accent-color); transition: width 0.3s ease; opacity: 0; }
+        .project-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .project-card:hover::before { opacity: 1; }
+        .project-card h3 { color: var(--text-color); margin-bottom: 15px; font-size: 1.4em; }
+        .project-date { color: var(--accent-color); font-size: 0.85em; font-weight: 600; margin-bottom: 10px; display: block; letter-spacing: 1px; }
+        .project-card p { color: var(--text-muted); font-size: 0.95em; margin-bottom: 25px; line-height: 1.7; }
+        .project-link { color: var(--accent-color); font-weight: 600; font-size: 1.05em; display: inline-flex; align-items: center; gap: 8px; }
+        .project-link:hover { color: #fff; }
+
+        /* Experience Timeline */
+        .timeline { position: relative; border-left: 2px solid #334155; padding-left: 40px; margin-left: 20px; max-width: 800px; margin: 0 auto; }
+        .timeline-item { margin-bottom: 50px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: -49px; top: 0; width: 16px; height: 16px; background: var(--bg-color); border: 4px solid var(--accent-color); border-radius: 50%; }
+        .timeline-date { color: var(--accent-color); font-weight: 600; margin-bottom: 8px; display: inline-block; background: rgba(56, 189, 248, 0.1); padding: 4px 12px; border-radius: 20px; font-size: 0.9em; }
+        .timeline-title { font-size: 1.4em; font-weight: 700; color: var(--text-color); margin-bottom: 5px; }
+        .timeline-company { font-size: 1.05em; color: var(--text-muted); margin-bottom: 15px; font-weight: 500; }
+        .timeline-item ul { list-style-type: none; }
+        .timeline-item ul li { color: var(--text-muted); margin-bottom: 10px; position: relative; padding-left: 20px; }
+        .timeline-item ul li::before { content: '▹'; position: absolute; left: 0; color: var(--accent-color); }
+
+        /* Education */
+        .edu-container { max-width: 800px; margin: 0 auto; }
+        .education-card { background: var(--secondary-bg); padding: 30px; border-radius: 12px; border: 1px solid #334155; margin-bottom: 25px; transition: transform 0.3s; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+        .education-card:hover { transform: translateX(10px); border-color: var(--accent-color); }
+        .edu-details h3 { color: var(--text-color); font-size: 1.3em; margin-bottom: 5px; }
+        .edu-details p { color: var(--accent-color); font-weight: 500; }
+        .edu-details span { display: block; color: var(--text-muted); font-size: 0.9em; margin-top: 8px; }
+        .edu-date { background: #0f172a; padding: 8px 15px; border-radius: 8px; color: var(--text-muted); font-weight: 600; font-size: 0.9em; border: 1px solid #334155; }
 
         /* Contact Section */
-        .contact-box { background: var(--secondary-bg); padding: 40px; border-radius: 10px; text-align: center; }
-        .social-icons a { display: inline-block; margin: 0 15px; font-size: 2em; color: var(--text-muted); transition: 0.3s; }
-        .social-icons a:hover { color: var(--accent-color); transform: scale(1.1); }
+        .contact-box { max-width: 700px; margin: 0 auto; background: var(--secondary-bg); padding: 50px; border-radius: 15px; text-align: center; border: 1px solid #334155; }
+        .contact-box p { color: var(--text-muted); font-size: 1.1em; margin-bottom: 30px; }
+        .contact-info { margin-bottom: 40px; }
+        .contact-info p { color: var(--text-color); font-size: 1.2em; margin-bottom: 10px; font-weight: 500; }
+        .social-icons a { display: inline-flex; justify-content: center; align-items: center; width: 50px; height: 50px; margin: 0 10px; font-size: 1.5em; color: var(--text-color); background: #0f172a; border-radius: 50%; transition: all 0.3s ease; border: 1px solid #334155; }
+        .social-icons a:hover { color: #0f172a; background: var(--accent-color); border-color: var(--accent-color); transform: translateY(-5px); }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav { padding: 15px 20px; flex-direction: column; gap: 15px; }
+            .nav-links a { margin: 0 10px; }
+            .hero h1 { font-size: 2.5em; }
+            section { padding: 60px 5%; }
+            .education-card { flex-direction: column; align-items: flex-start; }
+        }
     </style>
 </head>
 <body>
@@ -78,77 +102,37 @@
         <div class="logo">Afjal Alam</div>
         <div class="nav-links">
             <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#resume">Resume</a>
+            <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <section id="home" class="hero">
-        <h1>Namaste! I am Afjal Alam</h1>
-        <h2>Aspiring Data Analyst</h2>
-        <p>3rd Year B.Tech CSE Student @ JaganNath University | Jaipur, India</p>
-        <a href="#projects" class="btn">View My Work</a>
-    </section>
-
-    <section id="about">
-        <h2 class="section-title">About <span>Me</span></h2>
-        <div class="about-content">
-            <div class="about-text">
-                <h3>SQL & Power BI Specialist</h3>
-                <p>Hi, I am Afjal Alam. I am deeply passionate about analyzing data to extract actionable business insights. I specialize in building end-to-end ETL pipelines, cleaning complex datasets, and creating interactive dashboards.</p>
-                <p>Whether it's writing complex SQL queries or designing DAX formulas in Power BI, I love turning raw data into meaningful stories that drive decision-making.</p>
-            </div>
-            <div class="skills-container">
-                <div class="skill">
-                    <div class="skill-name">SQL & PostgreSQL</div>
-                    <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
-                </div>
-                <div class="skill">
-                    <div class="skill-name">Power BI & Data Visualization</div>
-                    <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
-                </div>
-                <div class="skill">
-                    <div class="skill-name">Python (Pandas, NumPy)</div>
-                    <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
-                </div>
-                <div class="skill">
-                    <div class="skill-name">Advanced Excel</div>
-                    <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
-                </div>
-            </div>
+        <div class="profile-img-container">
+            <img src="Afjal Alam Professional photo.jpg" alt="Afjal Alam Profile">
         </div>
+        <h1>Hi, I'm Afjal Alam</h1>
+        <h2>Aspiring Data Scientist | Python Developer | Data Analyst</h2>
+        <p>Turning raw data into actionable insights through robust ETL pipelines, advanced SQL analytics, and interactive dashboards.</p>
+        <a href="Afjal_Alam_Resume.pdf" target="_blank" class="btn"><i class="fas fa-file-pdf"></i> View Resume</a>
     </section>
 
-    <section id="resume">
-        <h2 class="section-title">My <span>Resume</span></h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-date">Dec 2025 – Feb 2026</div>
-                <div class="timeline-title">Data Analytics Intern</div>
-                <div class="timeline-company">Apex Planet Pvt Ltd | Remote</div>
-                <ul>
-                    <li>Executed data manipulation and generated summary reports based on real-world business scenarios.</li>
-                    <li>Created insightful business metrics and recommendations to support data-driven decision-making.</li>
-                </ul>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">Jul 2024 – Aug 2025</div>
-                <div class="timeline-title">Python & Cybersecurity Intern</div>
-                <div class="timeline-company">Cisco Networking Academy | Remote</div>
-                <ul>
-                    <li>Developed strong foundational knowledge in Python programming, automation logic, and data privacy.</li>
-                    <li>Gained hands-on understanding of network security and ethical handling of sensitive information.</li>
-                </ul>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">2023 – Present</div>
-                <div class="timeline-title">B.Tech in Computer Science & Engineering</div>
-                <div class="timeline-company">JaganNath University, Jaipur</div>
-                <ul>
-                    <li>Core Coursework: DBMS, EDA & Data Cleaning, Data Structures & Algorithms, OOPs.</li>
-                </ul>
+    <section id="skills">
+        <h2 class="section-title">My <span>Technical Toolkit</span></h2>
+        <div class="skills-container">
+            <p style="color: var(--text-muted); margin-bottom: 20px;">Proficient in a diverse range of tools and technologies for data manipulation, analysis, and visualization.</p>
+            <div class="skills-content">
+                <span class="skill-tag">Python (Pandas, Matplotlib)</span>
+                <span class="skill-tag">Advanced SQL</span>
+                <span class="skill-tag">PostgreSQL & MySQL</span>
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">Advanced MS Excel</span>
+                <span class="skill-tag">Data Cleaning & Analysis</span>
+                <span class="skill-tag">Object-Oriented Programming (OOPs)</span>
+                <span class="skill-tag">Git & GitHub</span>
             </div>
         </div>
     </section>
@@ -157,31 +141,97 @@
         <h2 class="section-title">Featured <span>Projects</span></h2>
         <div class="projects-grid">
             <div class="project-card">
+                <span class="project-date">MAR 2026</span>
                 <h3>Customer Shopping Behavior Analysis</h3>
-                <p>Engineered an end-to-end ETL pipeline using Python (Pandas) to clean retail data and automate ingestion into PostgreSQL. Built an interactive Power BI dashboard uncovering a 73% non-subscriber gap to drive targeted marketing.</p>
-                <a href="https://github.com/afjalalam09/Customer-Shopping-Behavior-Analysis" target="_blank" class="project-link">View Project GitHub <i class="fas fa-arrow-right"></i></a>
+                <p>Engineered an end-to-end ETL pipeline using Python (Pandas) to clean retail data and automate ingestion into PostgreSQL. Built an interactive Power BI dashboard to visualize metrics, uncovering a 73% non-subscriber gap to drive targeted marketing.</p>
+                <a href="https://github.com/afjalalam09/Customer-Shopping-Behavior-Analysis" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
             </div>
+            
             <div class="project-card">
-                <h3>Telecom Customer Churn Analytics</h3>
-                <p>Modeled and cleaned raw telecom data using Excel & Power Query. Analyzed churn drivers using SQL & DAX, highlighting high-risk month-to-month contracts via a Power BI dashboard to drive targeted retention strategies.</p>
-                <a href="https://github.com/afjalalam09/telecom-churn-retention-analytics" target="_blank" class="project-link">View Project GitHub <i class="fas fa-arrow-right"></i></a>
+                <span class="project-date">MAR 2026</span>
+                <h3>Telecom Customer Churn Analysis</h3>
+                <p>Modeled and cleaned raw telecom data using Excel & Power Query. Analyzed churn drivers using SQL & DAX, focusing on core metrics. Designed a Power BI dashboard highlighting high-risk month-to-month contracts to drive targeted retention.</p>
+                <a href="https://github.com/afjalalam09/telecom-churn-retention-analytics" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
             </div>
+            
             <div class="project-card">
+                <span class="project-date">APR 2026</span>
                 <h3>Credit Card Financial Dashboard</h3>
-                <p>Developed an interactive dashboard using transaction and customer data from a SQL database. Streamlined data processing to monitor key performance metrics and trends, sharing actionable insights with stakeholders.</p>
-                <a href="https://github.com/afjalalam09/Credit-Card-Financial-Dashboard" target="_blank" class="project-link">View Project GitHub <i class="fas fa-arrow-right"></i></a>
+                <p>Developed an interactive dashboard using transaction and customer data from a SQL database to provide real-time insights. Streamlined data processing to monitor key performance metrics and shared actionable insights with stakeholders.</p>
+                <a href="https://github.com/afjalalam09/Credit-Card-Financial-Dashboard" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Professional <span>Experience</span></h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="timeline-date">DEC 2025 - FEB 2026</span>
+                <h3 class="timeline-title">Intern: Data Analytics</h3>
+                <h4 class="timeline-company">Apex Planet Pvt Ltd | Remote</h4>
+                <ul>
+                    <li>Executed data manipulation and generated summary reports based on real-world business scenarios.</li>
+                    <li>Created insightful business metrics and recommendations to support data-driven decision-making.</li>
+                </ul>
+            </div>
+            
+            <div class="timeline-item">
+                <span class="timeline-date">JUL 2024 - AUG 2025</span>
+                <h3 class="timeline-title">Intern: Python & Cybersecurity</h3>
+                <h4 class="timeline-company">Cisco Networking Academy | Remote</h4>
+                <ul>
+                    <li>Developed strong foundational knowledge in Python programming, automation logic, and data privacy.</li>
+                    <li>Gained hands-on understanding of network security and ethical handling of sensitive information.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">My <span>Education</span></h2>
+        <div class="edu-container">
+            <div class="education-card">
+                <div class="edu-details">
+                    <h3>JaganNath University</h3>
+                    <p>Bachelor of Technology in Computer Science and Engineering</p>
+                    <span>Jaipur, Rajasthan</span>
+                </div>
+                <div class="edu-date">2023 - Present</div>
+            </div>
+            
+            <div class="education-card">
+                <div class="edu-details">
+                    <h3>R.L.S.Y College</h3>
+                    <p>Intermediate (BSEB) - 73.6%</p>
+                    <span>Bettiah, Bihar</span>
+                </div>
+                <div class="edu-date">2020 - 2022</div>
+            </div>
+
+            <div class="education-card">
+                <div class="edu-details">
+                    <h3>Kamal Prasad H.S Inarwa Bazar</h3>
+                    <p>Matriculation (BSEB) - 78.6%</p>
+                    <span>West Champaran, Bihar</span>
+                </div>
+                <div class="edu-date">2018 - 2020</div>
             </div>
         </div>
     </section>
 
     <section id="contact">
-        <h2 class="section-title">Get in <span>Touch</span></h2>
+        <h2 class="section-title">Get In <span>Touch</span></h2>
         <div class="contact-box">
-            <p style="color: var(--text-muted); margin-bottom: 30px; font-size: 1.2em;">I am currently looking for an offline Data Analyst internship in Delhi or Patna for June 2026. Feel free to reach out!</p>
+            <p>I am actively seeking a paid, offline Data Analyst internship in Delhi or Patna for June 2026. If you have an opportunity or just want to connect, my inbox is always open!</p>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope" style="color: var(--accent-color); margin-right: 10px;"></i> afjal2021alam@gmail.com</p>
+                <p><i class="fas fa-phone-alt" style="color: var(--accent-color); margin-right: 10px;"></i> +91 9708909382</p>
+            </div>
             <div class="social-icons">
-                <a href="mailto:afjal2021alam@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/afjalalam" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/afjalalam09" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:afjal2021alam@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/afjalalam" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/afjalalam09" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </section>
