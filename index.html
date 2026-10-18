@@ -22,7 +22,8 @@
             --border-color: #334155;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
-        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; overflow-x: hidden; }
+        img { max-width: 100%; }
         a { text-decoration: none; color: inherit; }
  
         /* Navbar */
@@ -59,7 +60,7 @@
         .contact-icons .icon-text { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid currentColor; font-size: 0.55em; font-weight: 700; letter-spacing: 0; }
  
         /* Sections */
-        section { padding: 70px 8%; }
+        section { padding: 70px 8%; scroll-margin-top: 70px; }
         .section-title { font-size: 2.2em; text-align: center; margin-bottom: 40px; color: var(--text-color); font-weight: 700; }
         .section-title span { color: var(--accent-color); }
  
@@ -96,7 +97,7 @@
         .timeline-item ul li strong { color: var(--text-color); font-weight: 600; }
  
         /* Skills */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
         .skill-group { background: var(--secondary-bg); border: 1px solid var(--border-color); border-radius: 15px; padding: 22px; }
         .skill-group:hover { border-color: var(--accent-color); }
         .skill-group h3 { font-size: 0.95em; color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
@@ -105,7 +106,7 @@
         .skill-tag:hover { background: var(--accent-color); color: #0f172a; }
  
         /* Projects */
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
         .project-card { background: var(--secondary-bg); border-radius: 15px; overflow: hidden; border: 1px solid var(--border-color); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s ease; }
         .project-card:hover { transform: translateY(-5px); border-color: var(--accent-color); }
         .project-img { position: relative; width: 100%; aspect-ratio: 2 / 1; background: #0f172a; border-bottom: 1px solid var(--border-color); cursor: zoom-in; overflow: hidden; }
@@ -144,16 +145,14 @@
         /* Contact */
         .contact-wrapper { display: flex; flex-wrap: wrap; gap: 30px; max-width: 900px; margin: 0 auto; }
         .contact-info-box, .contact-form { flex: 1; min-width: 280px; background: var(--secondary-bg); padding: 30px; border-radius: 15px; border: 1px solid var(--border-color); }
-        .contact-rows { display: flex; flex-direction: column; gap: 10px; }
-        .contact-row { display: flex; align-items: center; gap: 14px; padding: 11px 14px; background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; transition: 0.3s; }
-        a.contact-row:hover { border-color: var(--accent-color); transform: translateX(4px); }
-        .contact-row .row-icon { width: 38px; height: 38px; flex-shrink: 0; border-radius: 50%; background: rgba(56, 189, 248, 0.1); color: var(--accent-color); display: flex; align-items: center; justify-content: center; font-size: 1em; }
-        .contact-row .row-text { display: flex; flex-direction: column; min-width: 0; }
-        .contact-row .row-label { font-size: 0.75em; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; }
-        .contact-row .row-value { font-size: 0.92em; color: var(--text-color); word-break: break-all; }
-        .contact-info-box .contact-icons { justify-content: flex-start; margin-top: 20px; }
-        .contact-info-box .more-label { margin-top: 20px; font-size: 0.75em; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; }
+        .contact-heading { font-size: 1.7em; line-height: 1.25; font-weight: 700; color: var(--text-color); margin-bottom: 12px; }
+        .contact-sub { color: var(--text-muted); font-size: 0.98em; margin-bottom: 22px; }
+        .contact-line { display: flex; align-items: center; gap: 12px; color: var(--text-color); font-size: 1.02em; font-weight: 500; margin-bottom: 14px; word-break: break-all; transition: color 0.3s; }
+        .contact-line i { color: var(--accent-color); font-size: 1.05em; width: 22px; text-align: center; }
+        .contact-line:hover { color: var(--accent-color); }
+        .contact-info-box .contact-icons { justify-content: flex-start; margin-top: 24px; }
         .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-size: 0.88em; font-weight: 500; color: var(--text-muted); margin-bottom: 6px; }
         .form-group input, .form-group textarea { width: 100%; padding: 12px; background: #0f172a; border: 1px solid var(--border-color); border-radius: 8px; color: #fff; font-size: 0.95em; }
         .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent-color); }
         .submit-btn { width: 100%; padding: 12px; background: var(--accent-color); color: #0f172a; border: none; border-radius: 8px; font-weight: 600; font-size: 1em; cursor: pointer; }
@@ -166,18 +165,77 @@
         footer .footer-contact i { color: var(--accent-color); margin-right: 6px; }
         footer .copyright { color: var(--text-muted); font-size: 0.8em; margin-top: 20px; }
  
+        /* Hamburger button (hidden on desktop) */
+        .nav-toggle { display: none; background: transparent; border: 1px solid var(--border-color); color: var(--text-color); width: 42px; height: 42px; border-radius: 10px; font-size: 1.1em; cursor: pointer; align-items: center; justify-content: center; }
+        .nav-toggle:hover { border-color: var(--accent-color); color: var(--accent-color); }
+ 
+        /* Tablet and mobile: collapse the menu */
+        @media (max-width: 900px) {
+            nav { padding: 10px 16px; flex-wrap: wrap; }
+            .nav-toggle { display: inline-flex; }
+            .nav-links { display: none; width: 100%; flex-direction: column; align-items: stretch; padding-top: 10px; max-height: calc(100vh - 70px); overflow-y: auto; }
+            .nav-links.open { display: flex; }
+            .nav-links a { margin: 0; padding: 12px 6px; border-top: 1px solid var(--border-color); font-size: 0.95em; }
+            .nav-links .nav-resume-btn { margin: 12px 0 6px; padding: 10px 15px; text-align: center; border-radius: 25px; }
+        }
+ 
         /* Mobile Adjustments */
         @media (max-width: 768px) {
-            nav { padding: 12px 15px; flex-direction: column; gap: 10px; }
-            .nav-links { justify-content: center; gap: 5px; }
-            .nav-links a { margin: 3px 8px; font-size: 0.8em; }
-            .hero h1 { font-size: 2.3em; }
-            .hero h2 { font-size: 1.15em; }
+            .hero { padding: 100px 16px 40px; }
+            .profile-img-container { width: 150px; height: 150px; margin-bottom: 20px; }
+            .hero h1 { font-size: 2em; }
+            .hero h2 { font-size: 1.05em; }
+            .hero-stack { font-size: 0.85em; }
+            .hero p.hero-intro { font-size: 0.95em; }
+            .hero-status { font-size: 0.85em; }
+            .hero-cta { flex-direction: column; width: 100%; max-width: 320px; }
+            .hero-cta .btn { justify-content: center; width: 100%; }
+            .contact-icons { gap: 10px; }
+            .contact-icons a { padding: 8px 13px; font-size: 0.82em; }
+ 
             section { padding: 50px 5%; }
-            .highlights { padding: 10px 5% 50px; }
-            .education-card { flex-direction: column; align-items: flex-start; }
-            .projects-grid, .skills-grid { grid-template-columns: 1fr; }
-            .section-title { font-size: 1.8em; }
+            .highlights { padding: 0 5% 40px; }
+            .about-stats { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+            .stat-box { padding: 14px 6px; }
+            .stat-box .stat-num { font-size: 1.3em; }
+            .stat-box .stat-label { font-size: 0.7em; }
+            .section-title { font-size: 1.7em; margin-bottom: 28px; }
+ 
+            .education-card { flex-direction: column; align-items: flex-start; padding: 20px; }
+            .edu-date { align-self: flex-start; }
+ 
+            .timeline { padding-left: 22px; margin-left: 6px; }
+            .timeline-item::before { left: -30px; }
+            .timeline-title { font-size: 1.15em; }
+            .timeline-item ul li { font-size: 0.9em; }
+ 
+            .skills-grid { gap: 14px; }
+            .skill-group { padding: 18px; }
+ 
+            .projects-grid { gap: 20px; }
+            .project-body { padding: 18px 18px 8px; }
+            .project-footer { padding: 6px 18px 18px; }
+            .project-desc { font-size: 0.88em; }
+ 
+            .cards-grid { gap: 14px; }
+            .info-card { padding: 20px; }
+ 
+            .contact-wrapper { gap: 20px; }
+            .contact-info-box, .contact-form { flex: 1 1 100%; min-width: 0; padding: 22px; }
+            .contact-heading { font-size: 1.4em; }
+            .contact-line { font-size: 0.95em; }
+            .form-group input, .form-group textarea { font-size: 16px; }
+ 
+            .lightbox-close { top: 12px; right: 16px; font-size: 2.4em; }
+            footer { padding: 24px 5%; }
+        }
+ 
+        /* Very small phones */
+        @media (max-width: 380px) {
+            .logo { font-size: 1.2em; }
+            .hero h1 { font-size: 1.8em; }
+            .skill-tag { font-size: 0.8em; padding: 6px 12px; }
+            .contact-icons a { padding: 7px 11px; }
         }
     </style>
 </head>
@@ -185,7 +243,8 @@
  
     <nav>
         <div class="logo">Afjal Alam</div>
-        <div class="nav-links">
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+        <div class="nav-links" id="nav-links">
             <a href="#education">Education</a>
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
@@ -506,30 +565,14 @@
         <h2 class="section-title">Get In <span>Touch</span></h2>
         <div class="contact-wrapper">
             <div class="contact-info-box">
-                <div class="contact-rows">
-                    <a class="contact-row" href="https://www.linkedin.com/in/afjalalam" target="_blank" rel="noopener">
-                        <span class="row-icon"><i class="fab fa-linkedin-in"></i></span>
-                        <span class="row-text"><span class="row-label">LinkedIn</span><span class="row-value">linkedin.com/in/afjalalam</span></span>
-                    </a>
-                    <a class="contact-row" href="https://github.com/afjalalam09" target="_blank" rel="noopener">
-                        <span class="row-icon"><i class="fab fa-github"></i></span>
-                        <span class="row-text"><span class="row-label">GitHub</span><span class="row-value">github.com/afjalalam09</span></span>
-                    </a>
-                    <a class="contact-row" href="mailto:afjal2021alam@gmail.com">
-                        <span class="row-icon"><i class="fas fa-envelope"></i></span>
-                        <span class="row-text"><span class="row-label">Email</span><span class="row-value">afjal2021alam@gmail.com</span></span>
-                    </a>
-                    <a class="contact-row" href="tel:+919708909382">
-                        <span class="row-icon"><i class="fas fa-phone-alt"></i></span>
-                        <span class="row-text"><span class="row-label">Phone</span><span class="row-value">+91 9708909382</span></span>
-                    </a>
-                    <div class="contact-row">
-                        <span class="row-icon"><i class="fas fa-map-marker-alt"></i></span>
-                        <span class="row-text"><span class="row-label">Location</span><span class="row-value">Jaipur, Rajasthan</span></span>
-                    </div>
-                </div>
-                <div class="more-label">Coding profiles</div>
-                <div class="contact-icons" style="margin-top: 10px;">
+                <h3 class="contact-heading">Let's turn your data into decisions</h3>
+                <p class="contact-sub">Open to Data Analyst roles and collaborations.</p>
+                <a class="contact-line" href="mailto:afjal2021alam@gmail.com"><i class="far fa-envelope"></i>afjal2021alam@gmail.com</a>
+                <a class="contact-line" href="tel:+919708909382"><i class="fas fa-phone-alt"></i>+91 9708909382</a>
+                <div class="contact-icons contact-pills">
+                    <a href="https://www.linkedin.com/in/afjalalam" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
+                    <a href="https://x.com/afjalalam24" target="_blank" rel="noopener" title="X"><span class="icon-text">X</span>X</a>
+                    <a href="https://github.com/afjalalam09" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i>GitHub</a>
                     <a href="https://www.hackerrank.com/profile/afjalalam09" target="_blank" rel="noopener" title="HackerRank"><i class="fab fa-hackerrank"></i>HackerRank</a>
                     <a href="https://www.geeksforgeeks.org/profile/afjalalam09" target="_blank" rel="noopener" title="GeeksforGeeks"><span class="icon-text">GfG</span>GeeksforGeeks</a>
                 </div>
@@ -537,13 +580,20 @@
  
             <form class="contact-form" action="https://formspree.io/f/xdaydvlq" method="POST">
                 <div class="form-group">
-                    <input type="text" name="name" placeholder="Your Name" required>
+                    <label for="cf-name">Your Name</label>
+                    <input type="text" id="cf-name" name="name" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" name="email" placeholder="Your Email" required>
+                    <label for="cf-email">Email</label>
+                    <input type="email" id="cf-email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                    <label for="cf-subject">Subject</label>
+                    <input type="text" id="cf-subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="cf-message">Message</label>
+                    <textarea id="cf-message" name="message" rows="5" required></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane" style="margin-left: 5px;"></i></button>
             </form>
@@ -551,19 +601,7 @@
     </section>
  
     <footer>
-        <div class="contact-icons" style="margin-top: 0;">
-            <a href="https://www.linkedin.com/in/afjalalam" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
-            <a href="https://github.com/afjalalam09" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i>GitHub</a>
-            <a href="https://www.hackerrank.com/profile/afjalalam09" target="_blank" rel="noopener" title="HackerRank"><i class="fab fa-hackerrank"></i>HackerRank</a>
-            <a href="https://www.geeksforgeeks.org/profile/afjalalam09" target="_blank" rel="noopener" title="GeeksforGeeks"><span class="icon-text">GfG</span>GeeksforGeeks</a>
-            <a href="mailto:afjal2021alam@gmail.com" title="Email"><i class="fas fa-envelope"></i>Email</a>
-            <a href="tel:+919708909382" title="Phone"><i class="fas fa-phone-alt"></i>Phone</a>
-        </div>
-        <div class="footer-contact">
-            <a href="mailto:afjal2021alam@gmail.com"><i class="fas fa-envelope"></i>afjal2021alam@gmail.com</a>
-            <a href="tel:+919708909382"><i class="fas fa-phone-alt"></i>+91 9708909382</a>
-        </div>
-        <div class="copyright">&copy; 2026 Afjal Alam</div>
+        <div class="copyright" style="margin-top: 0;">&copy; 2026 Afjal Alam</div>
     </footer>
  
     <!-- Lightbox for project screenshots -->
@@ -593,9 +631,21 @@
         function closeLightbox() { lightbox.classList.remove('open'); lightboxImg.src = ''; }
         lightbox.addEventListener('click', closeLightbox);
         document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+ 
+        // Mobile menu: open/close with the hamburger, close after choosing a link
+        var navToggle = document.getElementById('nav-toggle');
+        var navLinks = document.getElementById('nav-links');
+        function setMenu(open) {
+            navLinks.classList.toggle('open', open);
+            navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            navToggle.querySelector('i').className = open ? 'fas fa-times' : 'fas fa-bars';
+        }
+        navToggle.addEventListener('click', function () { setMenu(!navLinks.classList.contains('open')); });
+        navLinks.querySelectorAll('a').forEach(function (a) {
+            a.addEventListener('click', function () { setMenu(false); });
+        });
     </script>
  
 </body>
 </html>
  
-Claude finished the response
