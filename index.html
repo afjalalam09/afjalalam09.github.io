@@ -3,54 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afjal Alam | Data Analyst | Aspiring Data Science Portfolio</title>
+    <title>Afjal Alam | Data Analyst | Aspiring Data Scientist</title>
+    <meta name="description" content="Afjal Alam – Data Analyst and aspiring Data Scientist skilled in Python, SQL, Power BI and Snowflake. Explore projects in fraud detection, customer behavior, churn and sales analytics.">
+    <meta property="og:title" content="Afjal Alam | Data Analyst | Aspiring Data Scientist">
+    <meta property="og:description" content="Data Analyst skilled in Python, SQL, Power BI and Snowflake. Explore projects in fraud detection, customer behavior, churn and sales analytics.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://afjalalam09.github.io">
+    <meta property="og:image" content="https://afjalalam09.github.io/Afjal_Alam_Professional_photo.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --bg-color: #0f172a; 
-            --secondary-bg: #1e293b; 
-            --accent-color: #38bdf8; 
+            --bg-color: #0f172a;
+            --secondary-bg: #1e293b;
+            --accent-color: #38bdf8;
             --text-color: #f8fafc;
             --text-muted: #94a3b8;
+            --border-color: #334155;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
         body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
         a { text-decoration: none; color: inherit; }
-        
+ 
         /* Navbar */
-        nav { position: fixed; width: 100%; background: rgba(15, 23, 42, 0.95); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 1px solid #334155; backdrop-filter: blur(10px); }
+        nav { position: fixed; width: 100%; background: rgba(15, 23, 42, 0.95); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 1px solid var(--border-color); backdrop-filter: blur(10px); }
         .logo { font-size: 1.4em; font-weight: 700; color: var(--accent-color); letter-spacing: 1px; }
         .nav-links { display: flex; align-items: center; flex-wrap: wrap; }
-        .nav-links a { margin-left: 20px; font-weight: 500; font-size: 0.9em; transition: color 0.3s; }
+        .nav-links a { margin-left: 18px; font-weight: 500; font-size: 0.85em; transition: color 0.3s; }
         .nav-links a:hover { color: var(--accent-color); }
         .nav-resume-btn { background: transparent; border: 1px solid var(--accent-color); color: var(--accent-color) !important; padding: 6px 15px; border-radius: 20px; transition: all 0.3s ease !important; }
         .nav-resume-btn:hover { background: var(--accent-color); color: #0f172a !important; }
-
+ 
         /* Hero Section */
         .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 20px 50px; }
         .profile-img-container { width: 180px; height: 180px; border-radius: 50%; overflow: hidden; border: 4px solid var(--accent-color); margin-bottom: 25px; box-shadow: 0 0 30px rgba(56, 189, 248, 0.3); }
         .profile-img-container img { width: 100%; height: 100%; object-fit: cover; }
         .hero h1 { font-size: 3em; margin-bottom: 5px; font-weight: 700; }
-        .hero h2 { font-size: 1.4em; color: var(--accent-color); font-weight: 400; margin-bottom: 20px; }
-        .hero p { color: var(--text-muted); font-size: 1em; max-width: 650px; padding: 0 10px; }
-
+        .hero h2 { font-size: 1.4em; color: var(--accent-color); font-weight: 500; margin-bottom: 8px; }
+        .hero-stack { color: var(--text-color); font-size: 0.95em; font-weight: 500; letter-spacing: 0.5px; margin-bottom: 18px; }
+        .hero p.hero-intro { color: var(--text-muted); font-size: 1em; max-width: 700px; padding: 0 10px; }
+        .hero-status { margin-top: 16px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.9em; font-weight: 500; color: var(--text-color); background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.4); padding: 6px 16px; border-radius: 25px; }
+        .hero-status .dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 8px #22c55e; }
+        .hero-cta { margin-top: 26px; display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+        .btn { padding: 11px 26px; border-radius: 25px; font-weight: 600; font-size: 0.95em; transition: all 0.3s; border: 1px solid var(--accent-color); display: inline-flex; align-items: center; gap: 8px; }
+        .btn-primary { background: var(--accent-color); color: #0f172a; }
+        .btn-primary:hover { background: #0ea5e9; }
+        .btn-outline { color: var(--accent-color); }
+        .btn-outline:hover { background: var(--accent-color); color: #0f172a; }
+ 
+        /* Contact pills (icon + name) used in hero, contact box and footer */
+        .contact-icons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 24px; max-width: 760px; }
+        .contact-icons a { display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 9px 16px; font-size: 0.88em; font-weight: 500; color: var(--text-color); background: var(--secondary-bg); border-radius: 25px; border: 1px solid var(--border-color); transition: 0.3s; }
+        .contact-icons a:hover { background: var(--accent-color); color: #0f172a; border-color: var(--accent-color); transform: translateY(-3px); }
+        .contact-icons a i { font-size: 1.05em; }
+        .contact-icons .icon-text { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid currentColor; font-size: 0.55em; font-weight: 700; letter-spacing: 0; }
+ 
         /* Sections */
         section { padding: 70px 8%; }
         .section-title { font-size: 2.2em; text-align: center; margin-bottom: 40px; color: var(--text-color); font-weight: 700; }
         .section-title span { color: var(--accent-color); }
-
+ 
+        /* Highlight boxes (after hero) */
+        .highlights { padding: 10px 8% 60px; }
+        .about-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; max-width: 800px; margin: 0 auto; }
+        .stat-box { background: var(--secondary-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 18px 10px; text-align: center; }
+        .stat-box .stat-num { font-size: 1.6em; font-weight: 700; color: var(--accent-color); line-height: 1.2; }
+        .stat-box .stat-label { font-size: 0.8em; color: var(--text-muted); margin-top: 4px; }
+ 
         /* Education */
         .edu-container { max-width: 800px; margin: 0 auto; }
-        .education-card { background: var(--secondary-bg); padding: 25px; border-radius: 12px; border: 1px solid #334155; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+        .education-card { background: var(--secondary-bg); padding: 25px; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 15px; }
         .education-card:hover { border-color: var(--accent-color); }
         .edu-details h3 { color: var(--text-color); font-size: 1.2em; margin-bottom: 5px; }
         .edu-details p { color: var(--accent-color); font-weight: 500; font-size: 0.95em; }
         .edu-details span { display: block; color: var(--text-muted); font-size: 0.85em; margin-top: 5px; }
-        .edu-date { background: #0f172a; padding: 6px 12px; border-radius: 6px; color: var(--text-muted); font-weight: 600; font-size: 0.85em; border: 1px solid #334155; }
-
+        .edu-marks { display: inline-block; margin-top: 10px; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.4); color: var(--text-color); font-weight: 600; font-size: 0.85em; padding: 4px 12px; border-radius: 20px; }
+        .edu-marks small { color: var(--text-muted); font-weight: 400; }
+        .edu-coursework { margin-top: 10px; color: var(--text-muted); font-size: 0.85em; }
+        .edu-coursework .cw-label { color: var(--accent-color); font-weight: 700; }
+        .edu-date { background: #0f172a; padding: 6px 12px; border-radius: 6px; color: var(--text-muted); font-weight: 600; font-size: 0.85em; border: 1px solid var(--border-color); }
+ 
         /* Experience */
-        .timeline { position: relative; border-left: 2px solid #334155; padding-left: 30px; margin-left: 10px; max-width: 800px; margin: 0 auto; }
+        .timeline { position: relative; border-left: 2px solid var(--border-color); padding-left: 30px; margin-left: 10px; max-width: 800px; margin: 0 auto; }
         .timeline-item { margin-bottom: 40px; position: relative; }
         .timeline-item::before { content: ''; position: absolute; left: -39px; top: 0; width: 14px; height: 14px; background: var(--bg-color); border: 4px solid var(--accent-color); border-radius: 50%; }
         .timeline-date { color: var(--accent-color); font-weight: 600; margin-bottom: 6px; display: inline-block; background: rgba(56, 189, 248, 0.1); padding: 3px 10px; border-radius: 20px; font-size: 0.85em; }
@@ -59,50 +93,96 @@
         .timeline-item ul { list-style-type: none; }
         .timeline-item ul li { color: var(--text-muted); margin-bottom: 8px; position: relative; padding-left: 18px; font-size: 0.95em; }
         .timeline-item ul li::before { content: '▹'; position: absolute; left: 0; color: var(--accent-color); }
-
+        .timeline-item ul li strong { color: var(--text-color); font-weight: 600; }
+ 
         /* Skills */
-        .skills-container { max-width: 800px; margin: 0 auto; background: var(--secondary-bg); padding: 30px; border-radius: 15px; border: 1px solid #334155; text-align: center; }
-        .skills-content { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 15px; }
-        .skill-tag { background: #0f172a; color: var(--accent-color); padding: 10px 18px; border-radius: 25px; font-weight: 600; font-size: 0.9em; border: 1px solid #38bdf8; transition: all 0.3s; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+        .skill-group { background: var(--secondary-bg); border: 1px solid var(--border-color); border-radius: 15px; padding: 22px; }
+        .skill-group:hover { border-color: var(--accent-color); }
+        .skill-group h3 { font-size: 0.95em; color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
+        .skills-content { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-tag { background: #0f172a; color: var(--text-color); padding: 7px 14px; border-radius: 25px; font-weight: 500; font-size: 0.85em; border: 1px solid var(--accent-color); transition: all 0.3s; }
         .skill-tag:hover { background: var(--accent-color); color: #0f172a; }
-
+ 
         /* Projects */
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
-        .project-card { background: var(--secondary-bg); border-radius: 15px; padding: 25px; border: 1px solid #334155; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s ease; }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
+        .project-card { background: var(--secondary-bg); border-radius: 15px; overflow: hidden; border: 1px solid var(--border-color); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s ease; }
         .project-card:hover { transform: translateY(-5px); border-color: var(--accent-color); }
-        .project-card h3 { color: var(--text-color); margin-bottom: 10px; font-size: 1.25em; }
-        .project-date { color: var(--accent-color); font-size: 0.8em; font-weight: 600; margin-bottom: 8px; display: block; }
-        .project-card p { color: var(--text-muted); font-size: 0.9em; margin-bottom: 15px; line-height: 1.6; }
-        .skills-used { font-size: 0.85em; color: var(--accent-color); margin-bottom: 20px; font-weight: 500; }
-        .project-link { color: var(--accent-color); font-weight: 600; font-size: 0.95em; display: inline-flex; align-items: center; gap: 6px; }
+        .project-img { position: relative; width: 100%; aspect-ratio: 2 / 1; background: #0f172a; border-bottom: 1px solid var(--border-color); cursor: zoom-in; overflow: hidden; }
+        .project-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; transition: transform 0.4s ease; }
+        .project-card:hover .project-img img { transform: scale(1.04); }
+        .project-img.no-img { cursor: default; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.85em; }
+        .project-img.no-img::after { content: 'Screenshot coming soon'; }
+        .project-img.no-img img { display: none; }
+        .project-body { padding: 22px 25px 10px; }
+        .project-footer { padding: 6px 25px 22px; }
+        .project-card h3 { color: var(--text-color); margin-bottom: 4px; font-size: 1.2em; }
+        .project-date { color: var(--accent-color); font-size: 0.8em; font-weight: 600; margin-bottom: 10px; display: block; }
+        .project-desc { color: var(--text-muted); font-size: 0.9em; line-height: 1.65; margin-bottom: 14px; }
+        .project-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+        .pill { background: rgba(56, 189, 248, 0.1); color: var(--accent-color); border: 1px solid rgba(56, 189, 248, 0.4); padding: 4px 12px; border-radius: 20px; font-size: 0.78em; font-weight: 600; }
+        .project-link { color: var(--accent-color); font-weight: 600; font-size: 0.95em; display: inline-flex; align-items: center; gap: 8px; }
         .project-link:hover { color: #fff; }
-
+ 
+        /* Lightbox */
+        .lightbox { position: fixed; inset: 0; background: rgba(2, 6, 23, 0.92); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 20px; cursor: zoom-out; }
+        .lightbox.open { display: flex; }
+        .lightbox img { max-width: 100%; max-height: 90vh; border-radius: 10px; box-shadow: 0 0 40px rgba(56, 189, 248, 0.25); }
+        .lightbox-close { position: absolute; top: 18px; right: 26px; font-size: 2em; color: var(--text-color); cursor: pointer; line-height: 1; }
+ 
+        /* Certifications & Achievements */
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+        .info-card { background: var(--secondary-bg); border: 1px solid var(--border-color); border-radius: 15px; padding: 24px; display: flex; flex-direction: column; gap: 6px; transition: transform 0.3s ease; }
+        .info-card:hover { transform: translateY(-4px); border-color: var(--accent-color); }
+        .info-card .card-icon { width: 44px; height: 44px; border-radius: 50%; background: rgba(56, 189, 248, 0.1); color: var(--accent-color); display: flex; align-items: center; justify-content: center; font-size: 1.1em; margin-bottom: 8px; }
+        .info-card h3 { font-size: 1.05em; color: var(--text-color); font-weight: 600; }
+        .info-card .issuer { color: var(--accent-color); font-size: 0.88em; font-weight: 500; }
+        .info-card .detail { color: var(--text-muted); font-size: 0.88em; }
+        .cert-link { margin-top: 10px; align-self: flex-start; color: var(--accent-color); border: 1px solid var(--accent-color); padding: 5px 14px; border-radius: 20px; font-size: 0.82em; font-weight: 600; transition: all 0.3s; }
+        .cert-link:hover { background: var(--accent-color); color: #0f172a; }
+ 
         /* Contact */
         .contact-wrapper { display: flex; flex-wrap: wrap; gap: 30px; max-width: 900px; margin: 0 auto; }
-        .contact-info-box, .contact-form { flex: 1; min-width: 280px; background: var(--secondary-bg); padding: 30px; border-radius: 15px; border: 1px solid #334155; }
-        .contact-details p { color: var(--text-color); font-size: 1em; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; word-break: break-all; }
-        .social-icons { margin-top: 20px; }
-        .social-icons a { display: inline-flex; justify-content: center; align-items: center; width: 40px; height: 40px; margin-right: 10px; font-size: 1.1em; color: var(--text-color); background: #0f172a; border-radius: 50%; border: 1px solid #334155; transition: 0.3s; }
-        .social-icons a:hover { background: var(--accent-color); color: #0f172a; }
+        .contact-info-box, .contact-form { flex: 1; min-width: 280px; background: var(--secondary-bg); padding: 30px; border-radius: 15px; border: 1px solid var(--border-color); }
+        .contact-rows { display: flex; flex-direction: column; gap: 10px; }
+        .contact-row { display: flex; align-items: center; gap: 14px; padding: 11px 14px; background: #0f172a; border: 1px solid var(--border-color); border-radius: 12px; transition: 0.3s; }
+        a.contact-row:hover { border-color: var(--accent-color); transform: translateX(4px); }
+        .contact-row .row-icon { width: 38px; height: 38px; flex-shrink: 0; border-radius: 50%; background: rgba(56, 189, 248, 0.1); color: var(--accent-color); display: flex; align-items: center; justify-content: center; font-size: 1em; }
+        .contact-row .row-text { display: flex; flex-direction: column; min-width: 0; }
+        .contact-row .row-label { font-size: 0.75em; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; }
+        .contact-row .row-value { font-size: 0.92em; color: var(--text-color); word-break: break-all; }
+        .contact-info-box .contact-icons { justify-content: flex-start; margin-top: 20px; }
+        .contact-info-box .more-label { margin-top: 20px; font-size: 0.75em; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; }
         .form-group { margin-bottom: 15px; }
-        .form-group input, .form-group textarea { width: 100%; padding: 12px; background: #0f172a; border: 1px solid #334155; border-radius: 8px; color: #fff; font-size: 0.95em; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; background: #0f172a; border: 1px solid var(--border-color); border-radius: 8px; color: #fff; font-size: 0.95em; }
         .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent-color); }
         .submit-btn { width: 100%; padding: 12px; background: var(--accent-color); color: #0f172a; border: none; border-radius: 8px; font-weight: 600; font-size: 1em; cursor: pointer; }
         .submit-btn:hover { background: #0ea5e9; }
-
+ 
+        /* Footer */
+        footer { border-top: 1px solid var(--border-color); padding: 40px 8% 30px; text-align: center; background: rgba(30, 41, 59, 0.4); display: flex; flex-direction: column; align-items: center; }
+        footer .footer-contact { color: var(--text-muted); font-size: 0.92em; margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: center; }
+        footer .footer-contact a:hover { color: var(--accent-color); }
+        footer .footer-contact i { color: var(--accent-color); margin-right: 6px; }
+        footer .copyright { color: var(--text-muted); font-size: 0.8em; margin-top: 20px; }
+ 
         /* Mobile Adjustments */
         @media (max-width: 768px) {
             nav { padding: 12px 15px; flex-direction: column; gap: 10px; }
             .nav-links { justify-content: center; gap: 5px; }
-            .nav-links a { margin: 3px 8px; font-size: 0.85em; }
+            .nav-links a { margin: 3px 8px; font-size: 0.8em; }
             .hero h1 { font-size: 2.3em; }
+            .hero h2 { font-size: 1.15em; }
             section { padding: 50px 5%; }
+            .highlights { padding: 10px 5% 50px; }
             .education-card { flex-direction: column; align-items: flex-start; }
+            .projects-grid, .skills-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 1.8em; }
         }
     </style>
 </head>
 <body>
-
+ 
     <nav>
         <div class="logo">Afjal Alam</div>
         <div class="nav-links">
@@ -110,163 +190,351 @@
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#achievements">Achievements</a>
             <a href="#contact">Contact</a>
             <a href="Afjal_Alam_Resume.pdf" target="_blank" class="nav-resume-btn"><i class="fas fa-file-pdf"></i> Resume</a>
         </div>
     </nav>
-
+ 
     <section id="home" class="hero">
         <div class="profile-img-container">
             <img src="Afjal_Alam_Professional_photo.jpg" alt="Afjal Alam Profile">
         </div>
         <h1>Hi, I'm Afjal Alam</h1>
-        <h2>Data Analyst</h2>
-        <p>Transforming raw data into actionable insights through robust ETL pipelines, advanced SQL analytics, and interactive Power BI & Tableau dashboards.</p>
+        <h2>Data Analyst | Aspiring Data Scientist</h2>
+        <div class="hero-stack">Python · SQL · Power BI · Advanced Excel · Snowflake</div>
+        <p class="hero-intro">Fresher Data Analyst who collects, cleans and analyzes data, and builds interactive dashboards using Python, SQL, Excel, Power BI and Snowflake. I turn numbers into insights people can act on.</p>
+        <div class="hero-status"><span class="dot"></span> Open to Data Analyst roles</div>
+        <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="Afjal_Alam_Resume.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Download Resume</a>
+            <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+        <div class="contact-icons">
+            <a href="https://www.linkedin.com/in/afjalalam" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
+            <a href="https://github.com/afjalalam09" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i>GitHub</a>
+            <a href="https://www.hackerrank.com/profile/afjalalam09" target="_blank" rel="noopener" title="HackerRank"><i class="fab fa-hackerrank"></i>HackerRank</a>
+            <a href="https://www.geeksforgeeks.org/profile/afjalalam09" target="_blank" rel="noopener" title="GeeksforGeeks"><span class="icon-text">GfG</span>GeeksforGeeks</a>
+            <a href="mailto:afjal2021alam@gmail.com" title="Email"><i class="fas fa-envelope"></i>Email</a>
+            <a href="tel:+919708909382" title="Phone"><i class="fas fa-phone-alt"></i>Phone</a>
+        </div>
     </section>
-
+ 
+    <section class="highlights">
+        <div class="about-stats">
+            <div class="stat-box"><div class="stat-num">4</div><div class="stat-label">Projects</div></div>
+            <div class="stat-box"><div class="stat-num">2</div><div class="stat-label">Internships</div></div>
+            <div class="stat-box"><div class="stat-num">Rank 1</div><div class="stat-label">All India, Essay Writing</div></div>
+        </div>
+    </section>
+ 
     <section id="education">
         <h2 class="section-title">My <span>Education</span></h2>
         <div class="edu-container">
             <div class="education-card">
                 <div class="edu-details">
-                    <h3>JaganNath University</h3>
-                    <p>Bachelor of Technology in Computer Science Engineering (Final Year)</p>
+                    <h3>Jagannath University</h3>
+                    <p>Bachelor of Technology in Computer Science and Engineering</p>
                     <span>Jaipur, Rajasthan</span>
+                    <div class="edu-marks">CGPA: 7.85 / 10 <small>(till 6th semester)</small></div>
+                    <div class="edu-coursework"><span class="cw-label">Relevant Coursework:</span> DBMS, Statistical Methods, Data Analysis, Data Warehousing</div>
                 </div>
-                <div class="edu-date">2023 - 2027</div>
+                <div class="edu-date">Expected Graduation: June 2027</div>
             </div>
-            
+ 
             <div class="education-card">
                 <div class="edu-details">
                     <h3>R.L.S.Y College</h3>
-                    <p>Intermediate (BSEB) - 73.6%</p>
+                    <p>Intermediate (BSEB)</p>
                     <span>West Champaran, Bihar</span>
+                    <div class="edu-marks">Percentage: 73.6%</div>
                 </div>
                 <div class="edu-date">2020 - 2022</div>
             </div>
-
+ 
             <div class="education-card">
                 <div class="edu-details">
                     <h3>High School (Matriculation)</h3>
                     <p>Secondary School Education</p>
                     <span>Bihar</span>
+                    <div class="edu-marks">Percentage: 78.6%</div>
                 </div>
                 <div class="edu-date">2020</div>
             </div>
         </div>
     </section>
-
+ 
     <section id="experience">
         <h2 class="section-title">Professional <span>Experience</span></h2>
         <div class="timeline">
             <div class="timeline-item">
                 <span class="timeline-date">APR 2026 - MAY 2026</span>
-                <h3 class="timeline-title">Data Analyst Intern</h3>
+                <h3 class="timeline-title">AI & Data Analyst Intern</h3>
                 <h4 class="timeline-company">XYlofy AI | Remote</h4>
                 <ul>
-                    <li>Built data processing and analytics pipelines on 590K+ records using Python and Pandas.</li>
-                    <li>Developed high performance interactive dashboards and integrated analytical reporting to cut manual data screening time by 30%.</li>
+                    <li><strong>ML & Explainable AI:</strong> Built an ML pipeline on 590K+ records using XGBoost/LightGBM (94% ROC-AUC) and integrated SHAP, cutting manual audit time by 30%.</li>
+                    <li><strong>Live Dashboard:</strong> Developed a high-performance Streamlit dashboard with Plotly, reducing real-time fraud screening latency by 40%.</li>
                 </ul>
             </div>
-            
+ 
             <div class="timeline-item">
                 <span class="timeline-date">DEC 2025 - FEB 2026</span>
                 <h3 class="timeline-title">Data Analytics Intern</h3>
                 <h4 class="timeline-company">Apex Planet Pvt Ltd | Remote</h4>
                 <ul>
-                    <li>Cleaned and structured complex datasets using Python and Excel, improving data processing efficiency by 30%.</li>
-                    <li>Created insightful business metrics and interactive Power BI dashboards to support data-driven decision-making.</li>
+                    <li>Streamlined data processing workflows by cleaning and structuring complex datasets using Python and Advanced Excel, boosting operational efficiency by 30%.</li>
+                    <li>Formulated impactful business metrics and actionable recommendations using statistical analysis to support data-driven decision-making for internal stakeholders.</li>
                 </ul>
             </div>
         </div>
     </section>
-
+ 
     <section id="skills">
-        <h2 class="section-title">Technical <span>Toolkit</span></h2>
-        <div class="skills-container">
-            <div class="skills-content">
-                <span class="skill-tag">Python (Pandas, NumPy, Matplotlib)</span>
-                <span class="skill-tag">Advanced SQL</span>
-                <span class="skill-tag">PostgreSQL & MySQL</span>
-                <span class="skill-tag">Snowflake</span>
-                <span class="skill-tag">Power BI</span>
-                <span class="skill-tag">Tableau</span>
-                <span class="skill-tag">Power Query</span>
-                <span class="skill-tag">Microsoft Excel</span>
-                <span class="skill-tag">ETL Pipelines</span>
-                <span class="skill-tag">Data Visualization</span>
-                <span class="skill-tag">Git & GitHub</span>
+        <h2 class="section-title">Technical <span>Skills</span></h2>
+        <div class="skills-grid">
+            <div class="skill-group">
+                <h3>Programming</h3>
+                <div class="skills-content">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Python Libraries</h3>
+                <div class="skills-content">
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">NumPy</span>
+                    <span class="skill-tag">Matplotlib</span>
+                    <span class="skill-tag">Seaborn</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Data Analysis</h3>
+                <div class="skills-content">
+                    <span class="skill-tag">Exploratory Data Analysis (EDA)</span>
+                    <span class="skill-tag">Statistical Analysis</span>
+                    <span class="skill-tag">Data Cleaning</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Visualization & BI</h3>
+                <div class="skills-content">
+                    <span class="skill-tag">Power BI (Power Query, DAX)</span>
+                    <span class="skill-tag">Tableau</span>
+                    <span class="skill-tag">Advanced MS Excel</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Databases & Cloud</h3>
+                <div class="skills-content">
+                    <span class="skill-tag">Snowflake</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MySQL</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Tools & Version Control</h3>
+                <div class="skills-content">
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Anaconda (Jupyter Notebook)</span>
+                    <span class="skill-tag">PyCharm</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">GitHub</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3>Core Competencies</h3>
+                <div class="skills-content">
+                    <span class="skill-tag">Analytical Thinking</span>
+                    <span class="skill-tag">Cross-functional Communication</span>
+                    <span class="skill-tag">Leadership & Team Management</span>
+                </div>
             </div>
         </div>
     </section>
-
+ 
     <section id="projects">
         <h2 class="section-title">Featured <span>Projects</span></h2>
         <div class="projects-grid">
-            
-            <!-- Project 1 -->
+ 
+            <!-- Project 1: Fraud Detection -->
             <div class="project-card">
                 <div>
-                    <span class="project-date">MAY 2026</span>
-                    <h3>Real-Time Fraud Detection System</h3>
-                    <p>Built a Machine Learning pipeline for 500K+ financial records, achieving a 0.91 ROC-AUC. Deployed a Streamlit risk-monitoring dashboard for Explainable AI.</p>
-                    <div class="skills-used">Skills: Python, LightGBM, SHAP, Streamlit</div>
+                    <div class="project-img" data-full="images/fraud-detection.png">
+                        <img src="images/fraud-detection.png" alt="Real-Time Fraud Detection System dashboard" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3>Real-Time Fraud Detection System</h3>
+                        <span class="project-date">MAY 2026</span>
+                        <p class="project-desc">To reduce slow, manual fraud audits, I built a machine learning pipeline on 590K+ financial records using XGBoost and LightGBM, achieving 94% ROC-AUC. SHAP made the predictions explainable, and a Streamlit and Plotly dashboard enabled real-time screening, cutting manual audit time by 30% and screening latency by 40%.</p>
+                        <div class="project-pills">
+                            <span class="pill">Python</span>
+                            <span class="pill">XGBoost</span>
+                            <span class="pill">LightGBM</span>
+                            <span class="pill">SHAP</span>
+                            <span class="pill">Streamlit</span>
+                            <span class="pill">Plotly</span>
+                        </div>
+                    </div>
                 </div>
-                <a href="https://github.com/afjalalam09/KYC-Fraud-Detection-Project" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                <div class="project-footer">
+                    <a href="https://github.com/afjalalam09/KYC-Fraud-Detection-Project" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
             </div>
-
-            <!-- Project 2 -->
+ 
+            <!-- Project 2: Customer Shopping -->
             <div class="project-card">
                 <div>
-                    <span class="project-date">APR 2026</span>
-                    <h3>Pizza Sales Performance Analytics</h3>
-                    <p>Built a dynamic Power BI dashboard backed by complex SQL queries to process 48K+ records. Delivered actionable insights on peak sales trends.</p>
-                    <div class="skills-used">Skills: SQL, Power BI, DAX, Visualization</div>
+                    <div class="project-img" data-full="images/customer-shopping.png">
+                        <img src="images/customer-shopping.png" alt="Customer Shopping Behavior Analysis dashboard" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3>Customer Shopping Behavior Analysis</h3>
+                        <span class="project-date">MAR 2026</span>
+                        <p class="project-desc">To find untapped growth opportunities in customer behavior, I engineered a data pipeline and interactive dashboards over 3,900+ customer records. Advanced SQL queries and statistical analysis uncovered a 73% non-subscriber gap and a $62K+ youth revenue segment, enabling targeted growth strategies.</p>
+                        <div class="project-pills">
+                            <span class="pill">Python</span>
+                            <span class="pill">SQL</span>
+                            <span class="pill">PostgreSQL</span>
+                            <span class="pill">Power BI</span>
+                            <span class="pill">Statistical Analysis</span>
+                        </div>
+                    </div>
                 </div>
-                <a href="https://github.com/afjalalam09/Pizza-Sales-Performance-Analytics" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                <div class="project-footer">
+                    <a href="https://github.com/afjalalam09/Customer-Shopping-Behavior-Analysis" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
             </div>
-            
-            <!-- Project 3 -->
+ 
+            <!-- Project 3: Telecom Churn -->
             <div class="project-card">
                 <div>
-                    <span class="project-date">MAR 2026</span>
-                    <h3>Customer Shopping Behavior Analysis</h3>
-                    <p>Engineered an end-to-end ETL pipeline to clean retail data and automate ingestion into PostgreSQL. Uncovered insights via Power BI.</p>
-                    <div class="skills-used">Skills: Python, PostgreSQL, Power BI, ETL</div>
+                    <div class="project-img" data-full="images/telecom-churn.png">
+                        <img src="images/telecom-churn.png" alt="Telecom Customer Churn Analysis dashboard" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3>Telecom Customer Churn Analysis</h3>
+                        <span class="project-date">MAR 2026</span>
+                        <p class="project-desc">To understand which customers leave and why, I built an interactive visualization dashboard using Power Query and DAX on 7,000+ customer records. The analysis identified a 52% early-tenure churn risk within Month-to-Month contracts, leading to data-backed retention strategies.</p>
+                        <div class="project-pills">
+                            <span class="pill">Power BI</span>
+                            <span class="pill">Power Query</span>
+                            <span class="pill">DAX</span>
+                            <span class="pill">SQL</span>
+                            <span class="pill">Advanced Excel</span>
+                        </div>
+                    </div>
                 </div>
-                <a href="https://github.com/afjalalam09/Customer-Shopping-Behavior-Analysis" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                <div class="project-footer">
+                    <a href="https://github.com/afjalalam09/telecom-churn-retention-analytics" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
             </div>
-
-            <!-- Project 4 -->
+ 
+            <!-- Project 4: Pizza Sales -->
             <div class="project-card">
                 <div>
-                    <span class="project-date">MAR 2026</span>
-                    <h3>Telecom Customer Churn Analysis</h3>
-                    <p>Modeled and cleaned raw telecom data. Analyzed churn drivers highlighting high-risk month-to-month contracts via an interactive Power BI dashboard.</p>
-                    <div class="skills-used">Skills: Advanced Excel, Power Query, SQL, DAX</div>
+                    <div class="project-img" data-full="images/pizza-sales.png">
+                        <img src="images/pizza-sales.png" alt="Pizza Sales Performance Analytics dashboard" loading="lazy">
+                    </div>
+                    <div class="project-body">
+                        <h3>Pizza Sales Performance Analytics</h3>
+                        <span class="project-date">APR 2026</span>
+                        <p class="project-desc">To understand sales patterns for better menu and inventory decisions, I designed a dynamic Power BI dashboard driven by DAX and complex SQL queries over 48,000+ sales records. It delivered insights on peak sales trends and top and worst-performing items, helping optimize menu offerings and inventory planning.</p>
+                        <div class="project-pills">
+                            <span class="pill">SQL</span>
+                            <span class="pill">Power BI</span>
+                            <span class="pill">DAX</span>
+                            <span class="pill">Data Visualization</span>
+                        </div>
+                    </div>
                 </div>
-                <a href="https://github.com/afjalalam09/telecom-churn-retention-analytics" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                <div class="project-footer">
+                    <a href="https://github.com/afjalalam09/Pizza-Sales-Performance-Analytics" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-up-right-from-square"></i></a>
+                </div>
             </div>
-            
+ 
         </div>
     </section>
-
+ 
+    <section id="certifications">
+        <h2 class="section-title">My <span>Certifications</span></h2>
+        <div class="cards-grid">
+            <!-- To add a certificate link, put this inside a card:
+                 <a href="YOUR_CERTIFICATE_URL" target="_blank" rel="noopener" class="cert-link">View Certificate</a> -->
+            <div class="info-card">
+                <div class="card-icon"><i class="fas fa-certificate"></i></div>
+                <h3>Data Analytics Job Simulation</h3>
+                <div class="issuer">Deloitte Australia (Forage)</div>
+            </div>
+            <div class="info-card">
+                <div class="card-icon"><i class="fas fa-certificate"></i></div>
+                <h3>Introduction to SQL & Power BI</h3>
+                <div class="issuer">DataFlair</div>
+            </div>
+            <div class="info-card">
+                <div class="card-icon"><i class="fas fa-certificate"></i></div>
+                <h3>Python for Data Science</h3>
+                <div class="issuer">Udemy</div>
+            </div>
+            <div class="info-card">
+                <div class="card-icon"><i class="fas fa-certificate"></i></div>
+                <h3>Python Essentials 1</h3>
+                <div class="issuer">Cisco Networking Academy</div>
+            </div>
+        </div>
+    </section>
+ 
+    <section id="achievements">
+        <h2 class="section-title">My <span>Achievements</span></h2>
+        <div class="cards-grid">
+            <div class="info-card">
+                <div class="card-icon"><i class="fas fa-trophy"></i></div>
+                <h3>All India Rank 1</h3>
+                <div class="issuer">Essay/Article Writing, National Panchayati Raj Day (2025)</div>
+            </div>
+            <div class="info-card">
+                <div class="card-icon"><i class="fas fa-users"></i></div>
+                <h3>Team Leader</h3>
+                <div class="issuer">Smart India Hackathon 2025</div>
+                <div class="detail">Developed an innovative government technology solution.</div>
+            </div>
+        </div>
+    </section>
+ 
     <section id="contact">
         <h2 class="section-title">Get In <span>Touch</span></h2>
         <div class="contact-wrapper">
             <div class="contact-info-box">
-                <div class="contact-details">
-                    <p><i class="fas fa-envelope" style="color: var(--accent-color);"></i> afjal2021alam@gmail.com</p>
-                    <p><i class="fas fa-phone-alt" style="color: var(--accent-color);"></i> +91 9708909382</p>
-                    <p><i class="fas fa-map-marker-alt" style="color: var(--accent-color);"></i> Jaipur, Rajasthan</p>
+                <div class="contact-rows">
+                    <a class="contact-row" href="https://www.linkedin.com/in/afjalalam" target="_blank" rel="noopener">
+                        <span class="row-icon"><i class="fab fa-linkedin-in"></i></span>
+                        <span class="row-text"><span class="row-label">LinkedIn</span><span class="row-value">linkedin.com/in/afjalalam</span></span>
+                    </a>
+                    <a class="contact-row" href="https://github.com/afjalalam09" target="_blank" rel="noopener">
+                        <span class="row-icon"><i class="fab fa-github"></i></span>
+                        <span class="row-text"><span class="row-label">GitHub</span><span class="row-value">github.com/afjalalam09</span></span>
+                    </a>
+                    <a class="contact-row" href="mailto:afjal2021alam@gmail.com">
+                        <span class="row-icon"><i class="fas fa-envelope"></i></span>
+                        <span class="row-text"><span class="row-label">Email</span><span class="row-value">afjal2021alam@gmail.com</span></span>
+                    </a>
+                    <a class="contact-row" href="tel:+919708909382">
+                        <span class="row-icon"><i class="fas fa-phone-alt"></i></span>
+                        <span class="row-text"><span class="row-label">Phone</span><span class="row-value">+91 9708909382</span></span>
+                    </a>
+                    <div class="contact-row">
+                        <span class="row-icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="row-text"><span class="row-label">Location</span><span class="row-value">Jaipur, Rajasthan</span></span>
+                    </div>
                 </div>
-
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/afjalalam" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/afjalalam09" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <div class="more-label">Coding profiles</div>
+                <div class="contact-icons" style="margin-top: 10px;">
+                    <a href="https://www.hackerrank.com/profile/afjalalam09" target="_blank" rel="noopener" title="HackerRank"><i class="fab fa-hackerrank"></i>HackerRank</a>
+                    <a href="https://www.geeksforgeeks.org/profile/afjalalam09" target="_blank" rel="noopener" title="GeeksforGeeks"><span class="icon-text">GfG</span>GeeksforGeeks</a>
                 </div>
             </div>
-
+ 
             <form class="contact-form" action="https://formspree.io/f/xdaydvlq" method="POST">
                 <div class="form-group">
                     <input type="text" name="name" placeholder="Your Name" required>
@@ -281,6 +549,53 @@
             </form>
         </div>
     </section>
-
+ 
+    <footer>
+        <div class="contact-icons" style="margin-top: 0;">
+            <a href="https://www.linkedin.com/in/afjalalam" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
+            <a href="https://github.com/afjalalam09" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i>GitHub</a>
+            <a href="https://www.hackerrank.com/profile/afjalalam09" target="_blank" rel="noopener" title="HackerRank"><i class="fab fa-hackerrank"></i>HackerRank</a>
+            <a href="https://www.geeksforgeeks.org/profile/afjalalam09" target="_blank" rel="noopener" title="GeeksforGeeks"><span class="icon-text">GfG</span>GeeksforGeeks</a>
+            <a href="mailto:afjal2021alam@gmail.com" title="Email"><i class="fas fa-envelope"></i>Email</a>
+            <a href="tel:+919708909382" title="Phone"><i class="fas fa-phone-alt"></i>Phone</a>
+        </div>
+        <div class="footer-contact">
+            <a href="mailto:afjal2021alam@gmail.com"><i class="fas fa-envelope"></i>afjal2021alam@gmail.com</a>
+            <a href="tel:+919708909382"><i class="fas fa-phone-alt"></i>+91 9708909382</a>
+        </div>
+        <div class="copyright">&copy; 2026 Afjal Alam</div>
+    </footer>
+ 
+    <!-- Lightbox for project screenshots -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Project screenshot">
+    </div>
+ 
+    <script>
+        // If a screenshot is missing, show a neat placeholder instead of a broken image
+        document.querySelectorAll('.project-img img').forEach(function (img) {
+            img.addEventListener('error', function () {
+                img.parentElement.classList.add('no-img');
+            });
+        });
+ 
+        // Click a screenshot to view it full-size
+        var lightbox = document.getElementById('lightbox');
+        var lightboxImg = document.getElementById('lightbox-img');
+        document.querySelectorAll('.project-img').forEach(function (box) {
+            box.addEventListener('click', function () {
+                if (box.classList.contains('no-img')) return;
+                lightboxImg.src = box.getAttribute('data-full');
+                lightbox.classList.add('open');
+            });
+        });
+        function closeLightbox() { lightbox.classList.remove('open'); lightboxImg.src = ''; }
+        lightbox.addEventListener('click', closeLightbox);
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+    </script>
+ 
 </body>
 </html>
+ 
+Claude finished the response
