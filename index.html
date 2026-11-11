@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afjal Alam | Data Analyst | Aspiring Data Scientist</title>
-    <meta name="description" content="Afjal Alam – Data Analyst and aspiring Data Scientist skilled in Python, SQL, Power BI and Snowflake. Explore projects in fraud detection, customer behavior, churn and sales analytics.">
-    <meta property="og:title" content="Afjal Alam | Data Analyst | Aspiring Data Scientist">
-    <meta property="og:description" content="Data Analyst skilled in Python, SQL, Power BI and Snowflake. Explore projects in fraud detection, customer behavior, churn and sales analytics.">
+    <title>Afjal Alam | Data Analyst | Immediate Joiner (Jan 2027)</title>
+    <meta name="description" content="Afjal Alam – Data Analyst skilled in Python, SQL, Power BI and Snowflake. Explore projects in fraud detection, customer behavior, churn and sales analytics.">
+    <meta property="og:title" content="Afjal Alam | Data Analyst">
+    <meta property="og:description" content="Data Analyst skilled in Python, SQL, Power BI and Snowflake. Available for full-time roles starting Jan 2027.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://afjalalam09.github.io">
     <meta property="og:image" content="https://afjalalam09.github.io/Afjal_Alam_Professional_photo.jpg">
@@ -14,378 +14,351 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
+            /* Dark Theme Variables (Default) */
             --bg-color: #0f172a;
             --secondary-bg: #1e293b;
             --accent-color: #38bdf8;
             --text-color: #f8fafc;
             --text-muted: #94a3b8;
             --border-color: #334155;
+            --nav-bg: rgba(15, 23, 42, 0.95);
+            --tag-bg: #0f172a;
         }
+
+        /* Light Theme Variables */
+        body.light-mode {
+            --bg-color: #f8fafc;
+            --secondary-bg: #ffffff;
+            --accent-color: #0284c7; /* Darker blue for better visibility on white */
+            --text-color: #0f172a;
+            --text-muted: #475569;
+            --border-color: #e2e8f0;
+            --nav-bg: rgba(248, 250, 252, 0.95);
+            --tag-bg: #f1f5f9;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
-        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; overflow-x: hidden; }
+        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; overflow-x: hidden; transition: background-color 0.3s, color 0.3s; }
         img { max-width: 100%; }
         a { text-decoration: none; color: inherit; }
- 
+
         /* Navbar */
-        nav { position: fixed; width: 100%; background: rgba(15, 23, 42, 0.95); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 1px solid var(--border-color); backdrop-filter: blur(10px); }
+        nav { position: fixed; width: 100%; background: var(--nav-bg); padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 1px solid var(--border-color); backdrop-filter: blur(10px); transition: background-color 0.3s; }
         .logo { font-size: 1.4em; font-weight: 700; color: var(--accent-color); letter-spacing: 1px; }
+        .nav-right { display: flex; align-items: center; gap: 20px; }
         .nav-links { display: flex; align-items: center; flex-wrap: wrap; }
         .nav-links a { margin-left: 18px; font-weight: 500; font-size: 0.85em; transition: color 0.3s; }
         .nav-links a:hover { color: var(--accent-color); }
         .nav-resume-btn { background: transparent; border: 1px solid var(--accent-color); color: var(--accent-color) !important; padding: 6px 15px; border-radius: 20px; transition: all 0.3s ease !important; }
-        .nav-resume-btn:hover { background: var(--accent-color); color: #0f172a !important; }
- 
-        /* Hero Section */
-        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 120px 20px 50px; }
-        .profile-img-container { width: 180px; height: 180px; border-radius: 50%; overflow: hidden; border: 4px solid var(--accent-color); margin-bottom: 25px; box-shadow: 0 0 30px rgba(56, 189, 248, 0.3); }
+        .nav-resume-btn:hover { background: var(--accent-color); color: #ffffff !important; }
+        
+        /* Theme Toggle Button */
+        .theme-btn { background: transparent; border: none; color: var(--text-color); font-size: 1.2em; cursor: pointer; transition: color 0.3s; display: flex; align-items: center; justify-content: center; }
+        .theme-btn:hover { color: var(--accent-color); }
+
+        /* Hero Section (Updated Layout) */
+        .hero { min-height: 100vh; display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 120px 8% 50px; gap: 40px; }
+        .hero-content { flex: 1; text-align: left; }
+        .hero-image { flex: 1; display: flex; justify-content: center; align-items: center; }
+        
+        /* Square/Rectangular Profile Image */
+        .profile-img-container { width: 100%; max-width: 350px; aspect-ratio: 4/5; border-radius: 15px; overflow: hidden; border: 4px solid var(--accent-color); box-shadow: 0 0 30px rgba(56, 189, 248, 0.3); }
         .profile-img-container img { width: 100%; height: 100%; object-fit: cover; }
-        .hero h1 { font-size: 3em; margin-bottom: 5px; font-weight: 700; }
-        .hero h2 { font-size: 1.4em; color: var(--accent-color); font-weight: 500; margin-bottom: 8px; }
-        .hero-stack { color: var(--text-color); font-size: 0.95em; font-weight: 500; letter-spacing: 0.5px; margin-bottom: 18px; }
-        .hero p.hero-intro { color: var(--text-muted); font-size: 1em; max-width: 700px; padding: 0 10px; }
-        .hero-status { margin-top: 16px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.9em; font-weight: 500; color: var(--text-color); background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.4); padding: 6px 16px; border-radius: 25px; }
-        .hero-status .dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 8px #22c55e; }
-        .hero-cta { margin-top: 26px; display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+        
+        .hero h1 { font-size: 3.2em; margin-bottom: 5px; font-weight: 700; line-height: 1.2; }
+        .hero h2 { font-size: 1.5em; color: var(--accent-color); font-weight: 500; margin-bottom: 12px; }
+        .hero-stack { color: var(--text-color); font-size: 1em; font-weight: 500; letter-spacing: 0.5px; margin-bottom: 20px; }
+        .hero p.hero-intro { color: var(--text-muted); font-size: 1.05em; max-width: 600px; margin-bottom: 20px; }
+        .hero-status { display: inline-flex; align-items: center; gap: 8px; font-size: 0.95em; font-weight: 600; color: var(--text-color); background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.4); padding: 8px 18px; border-radius: 25px; }
+        .hero-status .dot { width: 10px; height: 10px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 8px #22c55e; }
+        
+        .hero-cta { margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap; justify-content: flex-start; }
         .btn { padding: 11px 26px; border-radius: 25px; font-weight: 600; font-size: 0.95em; transition: all 0.3s; border: 1px solid var(--accent-color); display: inline-flex; align-items: center; gap: 8px; }
-        .btn-primary { background: var(--accent-color); color: #0f172a; }
-        .btn-primary:hover { background: #0ea5e9; }
+        .btn-primary { background: var(--accent-color); color: #ffffff; }
+        body.light-mode .btn-primary { color: #ffffff; }
+        .btn-primary:hover { background: #0ea5e9; border-color: #0ea5e9; }
         .btn-outline { color: var(--accent-color); }
-        .btn-outline:hover { background: var(--accent-color); color: #0f172a; }
- 
-        /* Contact pills (icon + name) used in hero, contact box and footer */
-        .contact-icons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 24px; max-width: 760px; }
+        .btn-outline:hover { background: var(--accent-color); color: #ffffff; }
+
+        .contact-icons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-start; margin-top: 30px; }
         .contact-icons a { display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 9px 16px; font-size: 0.88em; font-weight: 500; color: var(--text-color); background: var(--secondary-bg); border-radius: 25px; border: 1px solid var(--border-color); transition: 0.3s; }
-        .contact-icons a:hover { background: var(--accent-color); color: #0f172a; border-color: var(--accent-color); transform: translateY(-3px); }
+        .contact-icons a:hover { background: var(--accent-color); color: #ffffff; border-color: var(--accent-color); transform: translateY(-3px); }
         .contact-icons a i { font-size: 1.05em; }
-        .contact-icons .icon-text { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid currentColor; font-size: 0.55em; font-weight: 700; letter-spacing: 0; }
- 
+
         /* Sections */
-        section { padding: 70px 8%; scroll-margin-top: 70px; }
+        section { padding: 80px 8%; scroll-margin-top: 70px; }
         .section-title { font-size: 2.2em; text-align: center; margin-bottom: 40px; color: var(--text-color); font-weight: 700; }
         .section-title span { color: var(--accent-color); }
- 
-        /* Highlight boxes (after hero) */
+
+        /* Highlights */
         .highlights { padding: 10px 8% 60px; }
         .about-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; max-width: 800px; margin: 0 auto; }
-        .stat-box { background: var(--secondary-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 18px 10px; text-align: center; }
+        .stat-box { background: var(--secondary-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 18px 10px; text-align: center; transition: background-color 0.3s, border-color 0.3s; }
         .stat-box .stat-num { font-size: 1.6em; font-weight: 700; color: var(--accent-color); line-height: 1.2; }
         .stat-box .stat-label { font-size: 0.8em; color: var(--text-muted); margin-top: 4px; }
- 
-        /* Education */
-        .edu-container { max-width: 800px; margin: 0 auto; }
-        .education-card { background: var(--secondary-bg); padding: 25px; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 15px; }
-        .education-card:hover { border-color: var(--accent-color); }
+
+        /* Education & Experience & Others */
+        .edu-container, .timeline, .skills-grid, .projects-grid, .cards-grid { max-width: 900px; margin: 0 auto; }
+        .projects-grid { max-width: 1200px; }
+        .skills-grid { max-width: 1100px; }
+        
+        .education-card, .skill-group, .project-card, .info-card, .contact-info-box, .contact-form { 
+            background: var(--secondary-bg); 
+            border: 1px solid var(--border-color); 
+            border-radius: 15px; 
+            transition: all 0.3s ease; 
+        }
+        
+        .education-card { padding: 25px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 15px; }
+        .education-card:hover, .skill-group:hover, .project-card:hover, .info-card:hover { border-color: var(--accent-color); transform: translateY(-3px); }
+        
         .edu-details h3 { color: var(--text-color); font-size: 1.2em; margin-bottom: 5px; }
-        .edu-details p { color: var(--accent-color); font-weight: 500; font-size: 0.95em; }
+        .edu-details p { color: var(--accent-color); font-weight: 600; font-size: 0.95em; }
         .edu-details span { display: block; color: var(--text-muted); font-size: 0.85em; margin-top: 5px; }
         .edu-marks { display: inline-block; margin-top: 10px; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.4); color: var(--text-color); font-weight: 600; font-size: 0.85em; padding: 4px 12px; border-radius: 20px; }
-        .edu-marks small { color: var(--text-muted); font-weight: 400; }
         .edu-coursework { margin-top: 10px; color: var(--text-muted); font-size: 0.85em; }
-        .edu-coursework .cw-label { color: var(--accent-color); font-weight: 700; }
-        .edu-date { background: #0f172a; padding: 6px 12px; border-radius: 6px; color: var(--text-muted); font-weight: 600; font-size: 0.85em; border: 1px solid var(--border-color); }
- 
-        /* Experience */
-        .timeline { position: relative; border-left: 2px solid var(--border-color); padding-left: 30px; margin-left: 10px; max-width: 800px; margin: 0 auto; }
+        .edu-date { background: var(--tag-bg); padding: 6px 12px; border-radius: 6px; color: var(--text-muted); font-weight: 600; font-size: 0.85em; border: 1px solid var(--border-color); }
+
+        /* Timeline (Experience) */
+        .timeline { position: relative; border-left: 2px solid var(--border-color); padding-left: 30px; margin-left: 10px; }
         .timeline-item { margin-bottom: 40px; position: relative; }
         .timeline-item::before { content: ''; position: absolute; left: -39px; top: 0; width: 14px; height: 14px; background: var(--bg-color); border: 4px solid var(--accent-color); border-radius: 50%; }
-        .timeline-date { color: var(--accent-color); font-weight: 600; margin-bottom: 6px; display: inline-block; background: rgba(56, 189, 248, 0.1); padding: 3px 10px; border-radius: 20px; font-size: 0.85em; }
+        .timeline-date { color: var(--accent-color); font-weight: 600; margin-bottom: 6px; display: inline-block; background: rgba(56, 189, 248, 0.1); padding: 4px 12px; border-radius: 20px; font-size: 0.85em; }
         .timeline-title { font-size: 1.3em; font-weight: 700; color: var(--text-color); margin-bottom: 3px; }
-        .timeline-company { font-size: 1em; color: var(--text-muted); margin-bottom: 12px; font-weight: 500; }
+        .timeline-company { font-size: 1em; color: var(--text-muted); margin-bottom: 15px; font-weight: 500; }
         .timeline-item ul { list-style-type: none; }
-        .timeline-item ul li { color: var(--text-muted); margin-bottom: 8px; position: relative; padding-left: 18px; font-size: 0.95em; }
+        .timeline-item ul li { color: var(--text-muted); margin-bottom: 10px; position: relative; padding-left: 20px; font-size: 0.95em; }
         .timeline-item ul li::before { content: '▹'; position: absolute; left: 0; color: var(--accent-color); }
-        .timeline-item ul li strong { color: var(--text-color); font-weight: 600; }
- 
+
         /* Skills */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
-        .skill-group { background: var(--secondary-bg); border: 1px solid var(--border-color); border-radius: 15px; padding: 22px; }
-        .skill-group:hover { border-color: var(--accent-color); }
-        .skill-group h3 { font-size: 0.95em; color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .skill-group { padding: 22px; }
+        .skill-group h3 { font-size: 0.95em; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
         .skills-content { display: flex; flex-wrap: wrap; gap: 10px; }
-        .skill-tag { background: #0f172a; color: var(--text-color); padding: 7px 14px; border-radius: 25px; font-weight: 500; font-size: 0.85em; border: 1px solid var(--accent-color); transition: all 0.3s; }
-        .skill-tag:hover { background: var(--accent-color); color: #0f172a; }
- 
+        .skill-tag { background: var(--tag-bg); color: var(--text-color); padding: 7px 14px; border-radius: 25px; font-weight: 500; font-size: 0.85em; border: 1px solid var(--border-color); transition: all 0.3s; }
+        .skill-tag:hover { background: var(--accent-color); color: #ffffff; border-color: var(--accent-color); }
+
         /* Projects */
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
-        .project-card { background: var(--secondary-bg); border-radius: 15px; overflow: hidden; border: 1px solid var(--border-color); display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s ease; }
-        .project-card:hover { transform: translateY(-5px); border-color: var(--accent-color); }
-        .project-img { position: relative; width: 100%; aspect-ratio: 2 / 1; background: #0f172a; border-bottom: 1px solid var(--border-color); cursor: zoom-in; overflow: hidden; }
-        .project-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; transition: transform 0.4s ease; }
-        .project-card:hover .project-img img { transform: scale(1.04); }
-        .project-img.no-img { cursor: default; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.85em; }
-        .project-img.no-img::after { content: 'Screenshot coming soon'; }
-        .project-img.no-img img { display: none; }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .project-card { display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; }
+        .project-img { position: relative; width: 100%; aspect-ratio: 2 / 1; background: var(--tag-bg); border-bottom: 1px solid var(--border-color); overflow: hidden; }
+        .project-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .project-card:hover .project-img img { transform: scale(1.05); }
         .project-body { padding: 22px 25px 10px; }
-        .project-footer { padding: 6px 25px 22px; }
-        .project-card h3 { color: var(--text-color); margin-bottom: 4px; font-size: 1.2em; }
-        .project-date { color: var(--accent-color); font-size: 0.8em; font-weight: 600; margin-bottom: 10px; display: block; }
-        .project-desc { color: var(--text-muted); font-size: 0.9em; line-height: 1.65; margin-bottom: 14px; }
+        .project-card h3 { color: var(--text-color); margin-bottom: 5px; font-size: 1.25em; }
+        .project-date { color: var(--accent-color); font-size: 0.8em; font-weight: 600; margin-bottom: 12px; display: inline-block; }
+        .project-desc { color: var(--text-muted); font-size: 0.9em; line-height: 1.65; margin-bottom: 15px; }
         .project-pills { display: flex; flex-wrap: wrap; gap: 8px; }
-        .pill { background: rgba(56, 189, 248, 0.1); color: var(--accent-color); border: 1px solid rgba(56, 189, 248, 0.4); padding: 4px 12px; border-radius: 20px; font-size: 0.78em; font-weight: 600; }
-        .project-link { color: var(--accent-color); font-weight: 600; font-size: 0.95em; display: inline-flex; align-items: center; gap: 8px; }
-        .project-link:hover { color: #fff; }
- 
-        /* Lightbox */
-        .lightbox { position: fixed; inset: 0; background: rgba(2, 6, 23, 0.92); display: none; align-items: center; justify-content: center; z-index: 2000; padding: 20px; cursor: zoom-out; }
-        .lightbox.open { display: flex; }
-        .lightbox img { max-width: 100%; max-height: 90vh; border-radius: 10px; box-shadow: 0 0 40px rgba(56, 189, 248, 0.25); }
-        .lightbox-close { position: absolute; top: 18px; right: 26px; font-size: 2em; color: var(--text-color); cursor: pointer; line-height: 1; }
- 
-        /* Certifications & Achievements */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
-        .info-card { background: var(--secondary-bg); border: 1px solid var(--border-color); border-radius: 15px; padding: 24px; display: flex; flex-direction: column; gap: 6px; transition: transform 0.3s ease; }
-        .info-card:hover { transform: translateY(-4px); border-color: var(--accent-color); }
-        .info-card .card-icon { width: 44px; height: 44px; border-radius: 50%; background: rgba(56, 189, 248, 0.1); color: var(--accent-color); display: flex; align-items: center; justify-content: center; font-size: 1.1em; margin-bottom: 8px; }
+        .pill { background: rgba(56, 189, 248, 0.1); color: var(--accent-color); border: 1px solid rgba(56, 189, 248, 0.3); padding: 4px 12px; border-radius: 20px; font-size: 0.78em; font-weight: 600; }
+        .project-footer { padding: 15px 25px 22px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .project-link { color: var(--text-color); font-weight: 600; font-size: 0.95em; display: inline-flex; align-items: center; gap: 8px; transition: color 0.3s; }
+        .project-link:hover { color: var(--accent-color); }
+
+        /* Certs & Achievements */
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+        .info-card { padding: 24px; display: flex; flex-direction: column; gap: 6px; }
+        .info-card .card-icon { width: 44px; height: 44px; border-radius: 50%; background: rgba(56, 189, 248, 0.1); color: var(--accent-color); display: flex; align-items: center; justify-content: center; font-size: 1.2em; margin-bottom: 10px; }
         .info-card h3 { font-size: 1.05em; color: var(--text-color); font-weight: 600; }
-        .info-card .issuer { color: var(--accent-color); font-size: 0.88em; font-weight: 500; }
-        .info-card .detail { color: var(--text-muted); font-size: 0.88em; }
-        .cert-link { margin-top: 10px; align-self: flex-start; color: var(--accent-color); border: 1px solid var(--accent-color); padding: 5px 14px; border-radius: 20px; font-size: 0.82em; font-weight: 600; transition: all 0.3s; }
-        .cert-link:hover { background: var(--accent-color); color: #0f172a; }
- 
+        .info-card .issuer { color: var(--accent-color); font-size: 0.9em; font-weight: 500; }
+
         /* Contact */
-        .contact-wrapper { display: flex; flex-wrap: wrap; gap: 30px; max-width: 900px; margin: 0 auto; }
-        .contact-info-box, .contact-form { flex: 1; min-width: 280px; background: var(--secondary-bg); padding: 30px; border-radius: 15px; border: 1px solid var(--border-color); }
-        .contact-heading { font-size: 1.7em; line-height: 1.25; font-weight: 700; color: var(--text-color); margin-bottom: 12px; }
-        .contact-sub { color: var(--text-muted); font-size: 0.98em; margin-bottom: 22px; }
-        .contact-line { display: flex; align-items: center; gap: 12px; color: var(--text-color); font-size: 1.02em; font-weight: 500; margin-bottom: 14px; word-break: break-all; transition: color 0.3s; }
-        .contact-line i { color: var(--accent-color); font-size: 1.05em; width: 22px; text-align: center; }
+        .contact-wrapper { display: flex; flex-wrap: wrap; gap: 30px; max-width: 1000px; margin: 0 auto; }
+        .contact-info-box, .contact-form { flex: 1; min-width: 300px; padding: 35px; }
+        .contact-heading { font-size: 1.8em; line-height: 1.3; font-weight: 700; color: var(--text-color); margin-bottom: 15px; }
+        .contact-sub { color: var(--text-muted); font-size: 1em; margin-bottom: 25px; }
+        .contact-line { display: flex; align-items: center; gap: 15px; color: var(--text-color); font-size: 1.05em; font-weight: 500; margin-bottom: 15px; transition: color 0.3s; }
+        .contact-line i { color: var(--accent-color); font-size: 1.1em; width: 20px; text-align: center; }
         .contact-line:hover { color: var(--accent-color); }
-        .contact-info-box .contact-icons { justify-content: flex-start; margin-top: 24px; }
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; font-size: 0.88em; font-weight: 500; color: var(--text-muted); margin-bottom: 6px; }
-        .form-group input, .form-group textarea { width: 100%; padding: 12px; background: #0f172a; border: 1px solid var(--border-color); border-radius: 8px; color: #fff; font-size: 0.95em; }
+        
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-size: 0.9em; font-weight: 500; color: var(--text-muted); margin-bottom: 8px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px 15px; background: var(--tag-bg); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color); font-size: 0.95em; transition: border-color 0.3s; }
         .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent-color); }
-        .submit-btn { width: 100%; padding: 12px; background: var(--accent-color); color: #0f172a; border: none; border-radius: 8px; font-weight: 600; font-size: 1em; cursor: pointer; }
+        .submit-btn { width: 100%; padding: 14px; background: var(--accent-color); color: #ffffff; border: none; border-radius: 8px; font-weight: 600; font-size: 1.05em; cursor: pointer; transition: background 0.3s; }
         .submit-btn:hover { background: #0ea5e9; }
- 
-        /* Footer */
-        footer { border-top: 1px solid var(--border-color); padding: 40px 8% 30px; text-align: center; background: rgba(30, 41, 59, 0.4); display: flex; flex-direction: column; align-items: center; }
-        footer .footer-contact { color: var(--text-muted); font-size: 0.92em; margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: center; }
-        footer .footer-contact a:hover { color: var(--accent-color); }
-        footer .footer-contact i { color: var(--accent-color); margin-right: 6px; }
-        footer .copyright { color: var(--text-muted); font-size: 0.8em; margin-top: 20px; }
- 
-        /* Hamburger button (hidden on desktop) */
-        .nav-toggle { display: none; background: transparent; border: 1px solid var(--border-color); color: var(--text-color); width: 42px; height: 42px; border-radius: 10px; font-size: 1.1em; cursor: pointer; align-items: center; justify-content: center; }
-        .nav-toggle:hover { border-color: var(--accent-color); color: var(--accent-color); }
- 
-        /* Tablet and mobile: collapse the menu */
+
+        footer { border-top: 1px solid var(--border-color); padding: 30px 8%; text-align: center; color: var(--text-muted); font-size: 0.9em; }
+
+        /* Responsive */
+        .nav-toggle { display: none; background: transparent; border: 1px solid var(--border-color); color: var(--text-color); width: 40px; height: 40px; border-radius: 8px; font-size: 1.2em; cursor: pointer; }
+        
         @media (max-width: 900px) {
-            nav { padding: 10px 16px; flex-wrap: wrap; }
-            .nav-toggle { display: inline-flex; }
-            .nav-links { display: none; width: 100%; flex-direction: column; align-items: stretch; padding-top: 10px; max-height: calc(100vh - 70px); overflow-y: auto; }
+            .hero { flex-direction: column-reverse; text-align: center; padding-top: 100px; gap: 30px; }
+            .hero-content { text-align: center; }
+            .hero p.hero-intro { margin: 0 auto 20px; }
+            .hero-cta, .contact-icons { justify-content: center; }
+            
+            nav { padding: 12px 20px; flex-wrap: wrap; }
+            .nav-toggle { display: inline-flex; align-items: center; justify-content: center; margin-left: 15px; }
+            .nav-links { display: none; width: 100%; flex-direction: column; padding-top: 15px; }
             .nav-links.open { display: flex; }
-            .nav-links a { margin: 0; padding: 12px 6px; border-top: 1px solid var(--border-color); font-size: 0.95em; }
-            .nav-links .nav-resume-btn { margin: 12px 0 6px; padding: 10px 15px; text-align: center; border-radius: 25px; }
+            .nav-links a { margin: 0; padding: 12px 0; border-top: 1px solid var(--border-color); width: 100%; text-align: center; }
+            .nav-links .nav-resume-btn { margin-top: 10px; width: auto; }
         }
- 
-        /* Mobile Adjustments */
+        
         @media (max-width: 768px) {
-            .hero { padding: 100px 16px 40px; }
-            .profile-img-container { width: 150px; height: 150px; margin-bottom: 20px; }
-            .hero h1 { font-size: 2em; }
-            .hero h2 { font-size: 1.05em; }
-            .hero-stack { font-size: 0.85em; }
-            .hero p.hero-intro { font-size: 0.95em; }
-            .hero-status { font-size: 0.85em; }
-            .hero-cta { flex-direction: column; width: 100%; max-width: 320px; }
-            .hero-cta .btn { justify-content: center; width: 100%; }
-            .contact-icons { gap: 10px; }
-            .contact-icons a { padding: 8px 13px; font-size: 0.82em; }
- 
-            section { padding: 50px 5%; }
-            .highlights { padding: 0 5% 40px; }
-            .about-stats { grid-template-columns: repeat(3, 1fr); gap: 10px; }
-            .stat-box { padding: 14px 6px; }
-            .stat-box .stat-num { font-size: 1.3em; }
-            .stat-box .stat-label { font-size: 0.7em; }
-            .section-title { font-size: 1.7em; margin-bottom: 28px; }
- 
-            .education-card { flex-direction: column; align-items: flex-start; padding: 20px; }
-            .edu-date { align-self: flex-start; }
- 
-            .timeline { padding-left: 22px; margin-left: 6px; }
-            .timeline-item::before { left: -30px; }
-            .timeline-title { font-size: 1.15em; }
-            .timeline-item ul li { font-size: 0.9em; }
- 
-            .skills-grid { gap: 14px; }
-            .skill-group { padding: 18px; }
- 
-            .projects-grid { gap: 20px; }
-            .project-body { padding: 18px 18px 8px; }
-            .project-footer { padding: 6px 18px 18px; }
-            .project-desc { font-size: 0.88em; }
- 
-            .cards-grid { gap: 14px; }
-            .info-card { padding: 20px; }
- 
-            .contact-wrapper { gap: 20px; }
-            .contact-info-box, .contact-form { flex: 1 1 100%; min-width: 0; padding: 22px; }
-            .contact-heading { font-size: 1.4em; }
-            .contact-line { font-size: 0.95em; }
-            .form-group input, .form-group textarea { font-size: 16px; }
- 
-            .lightbox-close { top: 12px; right: 16px; font-size: 2.4em; }
-            footer { padding: 24px 5%; }
-        }
- 
-        /* Very small phones */
-        @media (max-width: 380px) {
-            .logo { font-size: 1.2em; }
-            .hero h1 { font-size: 1.8em; }
-            .skill-tag { font-size: 0.8em; padding: 6px 12px; }
-            .contact-icons a { padding: 7px 11px; }
+            .hero h1 { font-size: 2.2em; }
+            section { padding: 60px 5%; }
+            .education-card { flex-direction: column; }
+            .timeline { padding-left: 20px; }
+            .timeline-item::before { left: -28px; }
+            .contact-wrapper { flex-direction: column; }
+            .contact-info-box, .contact-form { padding: 25px; }
         }
     </style>
 </head>
 <body>
- 
+
     <nav>
         <div class="logo">Afjal Alam</div>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+        <div class="nav-right">
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+            <button class="nav-toggle" id="nav-toggle"><i class="fas fa-bars"></i></button>
+        </div>
         <div class="nav-links" id="nav-links">
-            <a href="#education">Education</a>
             <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#achievements">Achievements</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
             <a href="#contact">Contact</a>
             <a href="Afjal_Alam_Resume.pdf" target="_blank" class="nav-resume-btn"><i class="fas fa-file-pdf"></i> Resume</a>
         </div>
     </nav>
- 
+
     <section id="home" class="hero">
-        <div class="profile-img-container">
-            <img src="Afjal_Alam_Professional_photo.jpg" alt="Afjal Alam Profile">
-        </div>
-        <h1>Hi, I'm Afjal Alam</h1>
-        <h2>Data Analyst | Aspiring Data Scientist</h2>
-        <div class="hero-stack">Python · SQL · Power BI · Advanced Excel · Snowflake</div>
-        <p class="hero-intro">Fresher Data Analyst who collects, cleans and analyzes data, and builds interactive dashboards using Python, SQL, Excel, Power BI and Snowflake. I turn numbers into insights people can act on.</p>
-        <div class="hero-status"><span class="dot"></span> Open to Data Analyst roles</div>
-        <div class="hero-cta">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="Afjal_Alam_Resume.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Download Resume</a>
-            <a href="#contact" class="btn btn-outline">Get In Touch</a>
-        </div>
-        <div class="contact-icons">
-            <a href="https://www.linkedin.com/in/afjalalam" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
-            <a href="https://github.com/afjalalam09" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i>GitHub</a>
-            <a href="https://www.hackerrank.com/profile/afjalalam09" target="_blank" rel="noopener" title="HackerRank"><i class="fab fa-hackerrank"></i>HackerRank</a>
-            <a href="https://www.geeksforgeeks.org/profile/afjalalam09" target="_blank" rel="noopener" title="GeeksforGeeks"><span class="icon-text">GfG</span>GeeksforGeeks</a>
-            <a href="mailto:afjal2021alam@gmail.com" title="Email"><i class="fas fa-envelope"></i>Email</a>
-            <a href="tel:+919708909382" title="Phone"><i class="fas fa-phone-alt"></i>Phone</a>
-        </div>
-    </section>
- 
-    <section class="highlights">
-        <div class="about-stats">
-            <div class="stat-box"><div class="stat-num">4</div><div class="stat-label">Projects</div></div>
-            <div class="stat-box"><div class="stat-num">2</div><div class="stat-label">Internships</div></div>
-            <div class="stat-box"><div class="stat-num">Rank 1</div><div class="stat-label">All India, Essay Writing</div></div>
-        </div>
-    </section>
- 
-    <section id="education">
-        <h2 class="section-title">My <span>Education</span></h2>
-        <div class="edu-container">
-            <div class="education-card">
-                <div class="edu-details">
-                    <h3>Jagannath University</h3>
-                    <p>Bachelor of Technology in Computer Science and Engineering</p>
-                    <span>Jaipur, Rajasthan</span>
-                    <div class="edu-marks">CGPA: 7.85 / 10 <small>(till 6th semester)</small></div>
-                    <div class="edu-coursework"><span class="cw-label">Relevant Coursework:</span> DBMS, Statistical Methods, Data Analysis, Data Warehousing</div>
-                </div>
-                <div class="edu-date">Expected Graduation: June 2027</div>
+        <div class="hero-content">
+            <h1>Hi, I'm Afjal Alam</h1>
+            <h2>Data Analyst | Immediate Joiner (Jan 2027)</h2>
+            <div class="hero-stack">Python · SQL · Power BI · Advanced Excel · Snowflake</div>
+            <p class="hero-intro">I transform complex datasets into actionable business strategies. Experienced in building interactive dashboards, data pipelines, and end-to-end analytics workflows.</p>
+            
+            <div class="hero-status"><span class="dot"></span> Open to Full-Time Roles starting Jan 2027</div>
+            
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="Afjal_Alam_Resume.pdf" target="_blank" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Download Resume</a>
             </div>
- 
-            <div class="education-card">
-                <div class="edu-details">
-                    <h3>R.L.S.Y College</h3>
-                    <p>Intermediate (BSEB)</p>
-                    <span>West Champaran, Bihar</span>
-                    <div class="edu-marks">Percentage: 73.6%</div>
-                </div>
-                <div class="edu-date">2020 - 2022</div>
+            
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/afjalalam" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                <a href="https://github.com/afjalalam09" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="mailto:afjal2021alam@gmail.com"><i class="fas fa-envelope"></i> Email</a>
             </div>
- 
-            <div class="education-card">
-                <div class="edu-details">
-                    <h3>High School (Matriculation)</h3>
-                    <p>Secondary School Education</p>
-                    <span>Bihar</span>
-                    <div class="edu-marks">Percentage: 78.6%</div>
-                </div>
-                <div class="edu-date">2020</div>
+        </div>
+        <div class="hero-image">
+            <!-- Rectangular/Square Profile Image Box -->
+            <div class="profile-img-container">
+                <img src="Afjal_Alam_Professional_photo.jpg" alt="Afjal Alam">
             </div>
         </div>
     </section>
- 
+
     <section id="experience">
         <h2 class="section-title">Professional <span>Experience</span></h2>
         <div class="timeline">
             <div class="timeline-item">
                 <span class="timeline-date">APR 2026 - MAY 2026</span>
-                <h3 class="timeline-title">AI & Data Analyst Intern</h3>
-                <h4 class="timeline-company">XYlofy AI | Remote</h4>
+                <h3 class="timeline-title">Intern: AI & Data Analyst</h3>
+                <h4 class="timeline-company">Xylofy AI | Remote</h4>
                 <ul>
-                    <li><strong>ML & Explainable AI:</strong> Built an ML pipeline on 590K+ records using XGBoost/LightGBM (94% ROC-AUC) and integrated SHAP, cutting manual audit time by 30%.</li>
-                    <li><strong>Live Dashboard:</strong> Developed a high-performance Streamlit dashboard with Plotly, reducing real-time fraud screening latency by 40%.</li>
+                    <li>Developed a Real-Time Fraud Detection system in Python, processing 5.9 Lakh transactions to identify risk patterns and anomalies.</li>
+                    <li>Built an interactive Streamlit operations dashboard to segment transactions into actionable business tiers, optimizing manual review time.</li>
                 </ul>
             </div>
- 
+
             <div class="timeline-item">
                 <span class="timeline-date">DEC 2025 - FEB 2026</span>
-                <h3 class="timeline-title">Data Analytics Intern</h3>
+                <h3 class="timeline-title">Intern: Data Analytics</h3>
                 <h4 class="timeline-company">Apex Planet Pvt Ltd | Remote</h4>
                 <ul>
-                    <li>Streamlined data processing workflows by cleaning and structuring complex datasets using Python and Advanced Excel, boosting operational efficiency by 30%.</li>
-                    <li>Formulated impactful business metrics and actionable recommendations using statistical analysis to support data-driven decision-making for internal stakeholders.</li>
+                    <li>Executed an end-to-end data analytics workflow (Python, SQL) and developed interactive Power BI dashboards to track core sales KPIs like Total Sales and AOV.</li>
+                    <li>Validated customer segments via hypothesis testing (T-Test) and presented data-driven strategies to optimize marketing budgets and operations.</li>
                 </ul>
             </div>
         </div>
     </section>
- 
+
+    <section id="projects">
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <div class="projects-grid">
+            
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div>
+                    <div class="project-img"><img src="images/customer-shopping.png" alt="Customer Shopping Behavior" onerror="this.style.display='none'"></div>
+                    <div class="project-body">
+                        <h3>Customer Shopping Behavior Analysis</h3>
+                        <span class="project-date">APR 2026</span>
+                        <p class="project-desc">Engineered a robust data pipeline and interactive dashboards by processing 3,900+ customer records. Leveraged advanced SQL queries and statistical analysis to uncover a 73% non-subscriber gap and identified a $62K+ youth revenue segment, enabling targeted growth strategies.</p>
+                        <div class="project-pills">
+                            <span class="pill">SQL</span> <span class="pill">Python</span> <span class="pill">Power BI</span> <span class="pill">Statistical Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/afjalalam09/Customer-Shopping-Behavior-Analysis" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub Link</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div>
+                    <div class="project-img"><img src="images/telecom-churn.png" alt="Telecom Churn" onerror="this.style.display='none'"></div>
+                    <div class="project-body">
+                        <h3>Telecom Customer Churn Analysis</h3>
+                        <span class="project-date">MAY 2026</span>
+                        <p class="project-desc">Architected an interactive visualization dashboard utilizing Power Query and DAX to comprehensively analyze 7,000+ customer records. Identified a critical 52% early-tenure churn risk within Month-to-Month contracts and formulated data-backed retention strategies.</p>
+                        <div class="project-pills">
+                            <span class="pill">Power BI</span> <span class="pill">DAX</span> <span class="pill">Power Query</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/afjalalam09/telecom-churn-retention-analytics" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub Link</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div>
+                    <div class="project-img"><img src="images/pizza-sales.png" alt="Pizza Sales Analytics" onerror="this.style.display='none'"></div>
+                    <div class="project-body">
+                        <h3>Pizza Sales Performance Analytics</h3>
+                        <span class="project-date">SEP 2026</span>
+                        <p class="project-desc">Designed a dynamic Power BI dashboard driven by DAX and complex SQL queries to efficiently process and visualize 48,000+ sales records. Delivered actionable insights regarding peak sales trends and top/worst-performing items, optimizing menu offerings and inventory planning.</p>
+                        <div class="project-pills">
+                            <span class="pill">SQL</span> <span class="pill">Power BI</span> <span class="pill">DAX</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/afjalalam09/Pizza-Sales-Performance-Analytics" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub Link</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <section id="skills">
         <h2 class="section-title">Technical <span>Skills</span></h2>
         <div class="skills-grid">
             <div class="skill-group">
-                <h3>Programming</h3>
+                <h3>Languages & Analysis</h3>
                 <div class="skills-content">
-                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Python (Pandas, NumPy, Matplotlib, Seaborn)</span>
                     <span class="skill-tag">SQL</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3>Python Libraries</h3>
-                <div class="skills-content">
-                    <span class="skill-tag">Pandas</span>
-                    <span class="skill-tag">NumPy</span>
-                    <span class="skill-tag">Matplotlib</span>
-                    <span class="skill-tag">Seaborn</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3>Data Analysis</h3>
-                <div class="skills-content">
-                    <span class="skill-tag">Exploratory Data Analysis (EDA)</span>
-                    <span class="skill-tag">Statistical Analysis</span>
-                    <span class="skill-tag">Data Cleaning</span>
+                    <span class="skill-tag">Exploratory & Statistical Data Analysis</span>
                 </div>
             </div>
             <div class="skill-group">
                 <h3>Visualization & BI</h3>
                 <div class="skills-content">
-                    <span class="skill-tag">Power BI (Power Query, DAX)</span>
-                    <span class="skill-tag">Tableau</span>
+                    <span class="skill-tag">Power BI</span>
                     <span class="skill-tag">Advanced MS Excel</span>
                 </div>
             </div>
             <div class="skill-group">
-                <h3>Databases & Cloud</h3>
+                <h3>Cloud & Databases</h3>
                 <div class="skills-content">
                     <span class="skill-tag">Snowflake</span>
                     <span class="skill-tag">PostgreSQL</span>
@@ -396,157 +369,28 @@
                 <h3>Tools & Version Control</h3>
                 <div class="skills-content">
                     <span class="skill-tag">VS Code</span>
-                    <span class="skill-tag">Anaconda (Jupyter Notebook)</span>
-                    <span class="skill-tag">PyCharm</span>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">GitHub</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <h3>Core Competencies</h3>
-                <div class="skills-content">
-                    <span class="skill-tag">Analytical Thinking</span>
-                    <span class="skill-tag">Cross-functional Communication</span>
-                    <span class="skill-tag">Leadership & Team Management</span>
+                    <span class="skill-tag">Anaconda (Jupyter)</span>
+                    <span class="skill-tag">Git / GitHub</span>
                 </div>
             </div>
         </div>
     </section>
- 
-    <section id="projects">
-        <h2 class="section-title">Featured <span>Projects</span></h2>
-        <div class="projects-grid">
- 
-            <!-- Project 1: Fraud Detection -->
-            <div class="project-card">
-                <div>
-                    <div class="project-img" data-full="images/fraud-detection.png">
-                        <img src="images/fraud-detection.png" alt="Real-Time Fraud Detection System dashboard" loading="lazy">
-                    </div>
-                    <div class="project-body">
-                        <h3>Real-Time Fraud Detection System</h3>
-                        <span class="project-date">MAY 2026</span>
-                        <p class="project-desc">To reduce slow, manual fraud audits, I built a machine learning pipeline on 590K+ financial records using XGBoost and LightGBM, achieving 94% ROC-AUC. SHAP made the predictions explainable, and a Streamlit and Plotly dashboard enabled real-time screening, cutting manual audit time by 30% and screening latency by 40%.</p>
-                        <div class="project-pills">
-                            <span class="pill">Python</span>
-                            <span class="pill">XGBoost</span>
-                            <span class="pill">LightGBM</span>
-                            <span class="pill">SHAP</span>
-                            <span class="pill">Streamlit</span>
-                            <span class="pill">Plotly</span>
-                        </div>
-                    </div>
+
+    <section id="education">
+        <h2 class="section-title">Education & <span>Achievements</span></h2>
+        <div class="edu-container">
+            <div class="education-card">
+                <div class="edu-details">
+                    <h3>Jagannath University</h3>
+                    <p>Bachelor of Technology in Computer Science and Engineering</p>
+                    <span>Jaipur, Rajasthan | 4th Year (7th Semester)</span>
+                    <div class="edu-coursework" style="margin-top:15px;"><strong>Relevant Coursework:</strong> DBMS, Statistical Methods, Data Analysis, Data Warehousing</div>
                 </div>
-                <div class="project-footer">
-                    <a href="https://github.com/afjalalam09/KYC-Fraud-Detection-Project" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
- 
-            <!-- Project 2: Customer Shopping -->
-            <div class="project-card">
-                <div>
-                    <div class="project-img" data-full="images/customer-shopping.png">
-                        <img src="images/customer-shopping.png" alt="Customer Shopping Behavior Analysis dashboard" loading="lazy">
-                    </div>
-                    <div class="project-body">
-                        <h3>Customer Shopping Behavior Analysis</h3>
-                        <span class="project-date">MAR 2026</span>
-                        <p class="project-desc">To find untapped growth opportunities in customer behavior, I engineered a data pipeline and interactive dashboards over 3,900+ customer records. Advanced SQL queries and statistical analysis uncovered a 73% non-subscriber gap and a $62K+ youth revenue segment, enabling targeted growth strategies.</p>
-                        <div class="project-pills">
-                            <span class="pill">Python</span>
-                            <span class="pill">SQL</span>
-                            <span class="pill">PostgreSQL</span>
-                            <span class="pill">Power BI</span>
-                            <span class="pill">Statistical Analysis</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-footer">
-                    <a href="https://github.com/afjalalam09/Customer-Shopping-Behavior-Analysis" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
- 
-            <!-- Project 3: Telecom Churn -->
-            <div class="project-card">
-                <div>
-                    <div class="project-img" data-full="images/telecom-churn.png">
-                        <img src="images/telecom-churn.png" alt="Telecom Customer Churn Analysis dashboard" loading="lazy">
-                    </div>
-                    <div class="project-body">
-                        <h3>Telecom Customer Churn Analysis</h3>
-                        <span class="project-date">MAR 2026</span>
-                        <p class="project-desc">To understand which customers leave and why, I built an interactive visualization dashboard using Power Query and DAX on 7,000+ customer records. The analysis identified a 52% early-tenure churn risk within Month-to-Month contracts, leading to data-backed retention strategies.</p>
-                        <div class="project-pills">
-                            <span class="pill">Power BI</span>
-                            <span class="pill">Power Query</span>
-                            <span class="pill">DAX</span>
-                            <span class="pill">SQL</span>
-                            <span class="pill">Advanced Excel</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-footer">
-                    <a href="https://github.com/afjalalam09/telecom-churn-retention-analytics" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
- 
-            <!-- Project 4: Pizza Sales -->
-            <div class="project-card">
-                <div>
-                    <div class="project-img" data-full="images/pizza-sales.png">
-                        <img src="images/pizza-sales.png" alt="Pizza Sales Performance Analytics dashboard" loading="lazy">
-                    </div>
-                    <div class="project-body">
-                        <h3>Pizza Sales Performance Analytics</h3>
-                        <span class="project-date">APR 2026</span>
-                        <p class="project-desc">To understand sales patterns for better menu and inventory decisions, I designed a dynamic Power BI dashboard driven by DAX and complex SQL queries over 48,000+ sales records. It delivered insights on peak sales trends and top and worst-performing items, helping optimize menu offerings and inventory planning.</p>
-                        <div class="project-pills">
-                            <span class="pill">SQL</span>
-                            <span class="pill">Power BI</span>
-                            <span class="pill">DAX</span>
-                            <span class="pill">Data Visualization</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-footer">
-                    <a href="https://github.com/afjalalam09/Pizza-Sales-Performance-Analytics" target="_blank" rel="noopener" class="project-link"><i class="fab fa-github"></i> View on GitHub <i class="fas fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
- 
-        </div>
-    </section>
- 
-    <section id="certifications">
-        <h2 class="section-title">My <span>Certifications</span></h2>
-        <div class="cards-grid">
-            <!-- To add a certificate link, put this inside a card:
-                 <a href="YOUR_CERTIFICATE_URL" target="_blank" rel="noopener" class="cert-link">View Certificate</a> -->
-            <div class="info-card">
-                <div class="card-icon"><i class="fas fa-certificate"></i></div>
-                <h3>Data Analytics Job Simulation</h3>
-                <div class="issuer">Deloitte Australia (Forage)</div>
-            </div>
-            <div class="info-card">
-                <div class="card-icon"><i class="fas fa-certificate"></i></div>
-                <h3>Introduction to SQL & Power BI</h3>
-                <div class="issuer">DataFlair</div>
-            </div>
-            <div class="info-card">
-                <div class="card-icon"><i class="fas fa-certificate"></i></div>
-                <h3>Python for Data Science</h3>
-                <div class="issuer">Udemy</div>
-            </div>
-            <div class="info-card">
-                <div class="card-icon"><i class="fas fa-certificate"></i></div>
-                <h3>Python Essentials 1</h3>
-                <div class="issuer">Cisco Networking Academy</div>
+                <div class="edu-date">Expected: June 2027</div>
             </div>
         </div>
-    </section>
- 
-    <section id="achievements">
-        <h2 class="section-title">My <span>Achievements</span></h2>
-        <div class="cards-grid">
+        
+        <div class="cards-grid" style="margin-top: 30px;">
             <div class="info-card">
                 <div class="card-icon"><i class="fas fa-trophy"></i></div>
                 <h3>All India Rank 1</h3>
@@ -555,97 +399,94 @@
             <div class="info-card">
                 <div class="card-icon"><i class="fas fa-users"></i></div>
                 <h3>Team Leader</h3>
-                <div class="issuer">Smart India Hackathon 2025</div>
-                <div class="detail">Developed an innovative government technology solution.</div>
+                <div class="issuer">Smart India Hackathon 2025 (Govt. Tech Solution)</div>
+            </div>
+            <div class="info-card">
+                <div class="card-icon"><i class="fas fa-certificate"></i></div>
+                <h3>Certifications</h3>
+                <div class="issuer">Data Analytics Job Simulation (Deloitte), Python (Udemy), SQL & Power BI (DataFlair)</div>
             </div>
         </div>
     </section>
- 
+
     <section id="contact">
         <h2 class="section-title">Get In <span>Touch</span></h2>
         <div class="contact-wrapper">
             <div class="contact-info-box">
-                <h3 class="contact-heading">Let's turn your data into decisions</h3>
-                <p class="contact-sub">Open to Data Analyst roles and collaborations.</p>
-                <a class="contact-line" href="mailto:afjal2021alam@gmail.com"><i class="far fa-envelope"></i>afjal2021alam@gmail.com</a>
-                <a class="contact-line" href="tel:+919708909382"><i class="fas fa-phone-alt"></i>+91 9708909382</a>
-                <div class="contact-icons contact-pills">
-                    <a href="https://www.linkedin.com/in/afjalalam" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
-                    <a href="https://x.com/afjalalam24" target="_blank" rel="noopener" title="X"><span class="icon-text">X</span>X</a>
-                    <a href="https://github.com/afjalalam09" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i>GitHub</a>
-                    <a href="https://www.hackerrank.com/profile/afjalalam09" target="_blank" rel="noopener" title="HackerRank"><i class="fab fa-hackerrank"></i>HackerRank</a>
-                    <a href="https://www.geeksforgeeks.org/profile/afjalalam09" target="_blank" rel="noopener" title="GeeksforGeeks"><span class="icon-text">GfG</span>GeeksforGeeks</a>
-                </div>
+                <h3 class="contact-heading">Available for Full-Time Roles</h3>
+                <p class="contact-sub">Looking to join a dynamic team in Jan 2027. Let's discuss how my data skills can bring value to your company.</p>
+                <a class="contact-line" href="mailto:afjal2021alam@gmail.com"><i class="far fa-envelope"></i> afjal2021alam@gmail.com</a>
+                <a class="contact-line" href="tel:+919708909382"><i class="fas fa-phone-alt"></i> +91 9708909382</a>
+                <a class="contact-line" href="https://www.linkedin.com/in/afjalalam" target="_blank"><i class="fab fa-linkedin-in"></i> linkedin.com/in/afjalalam</a>
             </div>
- 
+
             <form class="contact-form" action="https://formspree.io/f/xdaydvlq" method="POST">
                 <div class="form-group">
-                    <label for="cf-name">Your Name</label>
-                    <input type="text" id="cf-name" name="name" required>
+                    <label>Your Name</label>
+                    <input type="text" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="cf-email">Email</label>
-                    <input type="email" id="cf-email" name="email" required>
+                    <label>Email</label>
+                    <input type="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="cf-subject">Subject</label>
-                    <input type="text" id="cf-subject" name="subject" required>
-                </div>
-                <div class="form-group">
-                    <label for="cf-message">Message</label>
-                    <textarea id="cf-message" name="message" rows="5" required></textarea>
+                    <label>Message</label>
+                    <textarea name="message" rows="4" required></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane" style="margin-left: 5px;"></i></button>
             </form>
         </div>
     </section>
- 
+
     <footer>
-        <div class="copyright" style="margin-top: 0;">&copy; 2026 Afjal Alam</div>
+        <div>&copy; 2026 Afjal Alam. Built for Data Analytics.</div>
     </footer>
- 
-    <!-- Lightbox for project screenshots -->
-    <div class="lightbox" id="lightbox">
-        <span class="lightbox-close" id="lightbox-close">&times;</span>
-        <img id="lightbox-img" src="" alt="Project screenshot">
-    </div>
- 
+
     <script>
-        // If a screenshot is missing, show a neat placeholder instead of a broken image
-        document.querySelectorAll('.project-img img').forEach(function (img) {
-            img.addEventListener('error', function () {
-                img.parentElement.classList.add('no-img');
-            });
-        });
- 
-        // Click a screenshot to view it full-size
-        var lightbox = document.getElementById('lightbox');
-        var lightboxImg = document.getElementById('lightbox-img');
-        document.querySelectorAll('.project-img').forEach(function (box) {
-            box.addEventListener('click', function () {
-                if (box.classList.contains('no-img')) return;
-                lightboxImg.src = box.getAttribute('data-full');
-                lightbox.classList.add('open');
-            });
-        });
-        function closeLightbox() { lightbox.classList.remove('open'); lightboxImg.src = ''; }
-        lightbox.addEventListener('click', closeLightbox);
-        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
- 
-        // Mobile menu: open/close with the hamburger, close after choosing a link
-        var navToggle = document.getElementById('nav-toggle');
-        var navLinks = document.getElementById('nav-links');
-        function setMenu(open) {
-            navLinks.classList.toggle('open', open);
-            navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-            navToggle.querySelector('i').className = open ? 'fas fa-times' : 'fas fa-bars';
+        // Theme Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = themeToggleBtn.querySelector('i');
+        const body = document.body;
+
+        // Check Local Storage for saved theme
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.add('light-mode');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
         }
-        navToggle.addEventListener('click', function () { setMenu(!navLinks.classList.contains('open')); });
-        navLinks.querySelectorAll('a').forEach(function (a) {
-            a.addEventListener('click', function () { setMenu(false); });
+
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            
+            if (body.classList.contains('light-mode')) {
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+
+        // Mobile Menu Logic
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+        const navIcon = navToggle.querySelector('i');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            if(navLinks.classList.contains('open')) {
+                navIcon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                navIcon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navIcon.classList.replace('fa-times', 'fa-bars');
+            });
         });
     </script>
- 
 </body>
 </html>
- 
